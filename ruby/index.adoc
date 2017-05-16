@@ -52,3 +52,50 @@ Verimlilik ve sadelik üzerine odaklanmış, açık kaynak kodlu dinamik bir dil
 Okumayı ve yazmayı kolaylaştıran, doğal bir sözdizimine sahiptir.
 Ayrıca günümüzün gözde programlama paradigmalarından olan nesneye yönelik programlama ve fonksiyonel programlama paradigmalarını güçlü bir şekilde desteklemektedir.
 Ruby özgür bir yazılımdır ve https://www.ruby-lang.org/en/about/license.txt[Ruby lisansı] ile lisanslanmıştır.
+
+== Kurulum
+
+Ruby'nin farklı işletim sistemlerinde farklı kurulumları vardır:
+
+=== Windows
+
+Ruby'yi Windows'a kurmanın en iyi yolu https://rubyinstaller.org/[RubyInstaller]'ı kullanmaktır.
+Siteye girip *Download* tuşuna basın ve en son Ruby sürümünü içeren kurucuyu indirip kurun.
+
+=== Mac OS X
+
+Mac OS X'te Ruby zaten kurulu gelmektedir, bu yüzden herhangi bir kuruluma gerek yoktur.
+
+=== GNU/Linux
+
+Ruby'yi GNU/Linux sisteminize paket yöneticileri aracılığıyla kolayca kurabilirsiniz:
+
+* *Debian, Ubuntu*
++
+----
+$ sudo apt-get install ruby-full
+----
+* *CentOS, Fedora, RHEL*
++
+----
+$ sudo yum install ruby
+----
+* *Gentoo*
++
+----
+$ sudo emerge dev-lang/ruby
+----
+* *Arch Linux*
++
+----
+$ sudo pacman -S ruby
+----
+
+Kurulumdan sonra şu komutla kurulumu doğrulayabilirsiniz:
+
+----
+$ ruby --version
+----
+
+Bu komut sisteminizde kurulu Ruby sürümünü çıktı olarak vermelidir.
+Eğer bunun yerine bir hata alıyorsanız yukarıdaki kurulum adımlarını tekrarlamalısınız.

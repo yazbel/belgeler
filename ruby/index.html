@@ -511,6 +511,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_ruby_hakkında">Ruby Hakkında</a></li>
+<li><a href="#_kurulum">Kurulum</a>
+<ul class="sectlevel2">
+<li><a href="#_windows">Windows</a></li>
+<li><a href="#_mac_os_x">Mac OS X</a></li>
+<li><a href="#_gnu_linux">GNU/Linux</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -581,11 +588,86 @@ Ruby özgür bir yazılımdır ve <a href="https://www.ruby-lang.org/en/about/li
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_kurulum">Kurulum</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ruby&#8217;nin farklı işletim sistemlerinde farklı kurulumları vardır:</p>
+</div>
+<div class="sect2">
+<h3 id="_windows">Windows</h3>
+<div class="paragraph">
+<p>Ruby&#8217;yi Windows&#8217;a kurmanın en iyi yolu <a href="https://rubyinstaller.org/">RubyInstaller</a>'ı kullanmaktır.
+Siteye girip <strong>Download</strong> tuşuna basın ve en son Ruby sürümünü içeren kurucuyu indirip kurun.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mac_os_x">Mac OS X</h3>
+<div class="paragraph">
+<p>Mac OS X&#8217;te Ruby zaten kurulu gelmektedir, bu yüzden herhangi bir kuruluma gerek yoktur.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gnu_linux">GNU/Linux</h3>
+<div class="paragraph">
+<p>Ruby&#8217;yi GNU/Linux sisteminize paket yöneticileri aracılığıyla kolayca kurabilirsiniz:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Debian, Ubuntu</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo apt-get install ruby-full</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>CentOS, Fedora, RHEL</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo yum install ruby</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Gentoo</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo emerge dev-lang/ruby</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Arch Linux</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo pacman -S ruby</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kurulumdan sonra şu komutla kurulumu doğrulayabilirsiniz:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ ruby --version</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Bu komut sisteminizde kurulu Ruby sürümünü çıktı olarak vermelidir.
+Eğer bunun yerine bir hata alıyorsanız yukarıdaki kurulum adımlarını tekrarlamalısınız.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Sürüm 0.1<br>
-Son güncelleme 2017-05-16 22:31:25 T³rkiye Standart Saati
+Son güncelleme 2017-05-16 23:53:23 T³rkiye Standart Saati
 </div>
 </div>
 </body>
