@@ -18,8 +18,8 @@ Burada çeşitli programlama dilleri, kütüphaneler ve teknolojiler hakkında b
 
 [NOTE]
 ====
-istihza.com Python 3 belgelerine link:/python-istihza[şu adres]ten ulaşabilirsiniz.
-Ayrıca bu belgeleri PDF olarak link:/python-istihza.pdf[şu adres]ten indirebilirsiniz.
+istihza.com Python 3 belgelerine link:python-istihza/[şu adres]ten ulaşabilirsiniz.
+Ayrıca bu belgeleri PDF olarak link:python-istihza.pdf[şu adres]ten indirebilirsiniz.
 ====
 
 == Belgeler Hakkında
