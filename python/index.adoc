@@ -1,5 +1,5 @@
 = Python Belgeleri
-İsmail Arılık <arilik.ismail@gmail.com>
+YazBel Topluluğu
 0.1, 13 Mayıs, 2017, YazBel Python Belgeleri
 :version-label: Sürüm
 :last-update-label: Son güncelleme

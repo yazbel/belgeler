@@ -1,5 +1,5 @@
 = YazBel Belgeleri
-İsmail Arılık <arilik.ismail@gmail.com>
+YazBel Topluluğu
 0.1, 13 Mayıs, 2017, YazBel Yazılım Belgelendirme Projesi Belgeleri
 :version-label: Sürüm
 :last-update-label: Son güncelleme

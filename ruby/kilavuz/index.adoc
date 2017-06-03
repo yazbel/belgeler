@@ -1,5 +1,5 @@
 = Ruby Kılavuzu
-İsmail Arılık <arilik.ismail@gmail.com>
+YazBel Topluluğu
 0.1, 3 Haziran, 2017, YazBel Ruby Belgeleri Kılavuzu
 :version-label: Sürüm
 :last-update-label: Son güncelleme
