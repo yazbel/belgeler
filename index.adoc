@@ -22,6 +22,13 @@ istihza.com Python 3 belgelerine link:python-istihza/[şu adres]ten ulaşabilirs
 Ayrıca bu belgeleri PDF olarak link:python-istihza.pdf[şu adres]ten indirebilirsiniz.
 ====
 
+[WARNING]
+====
+Buradaki belgeler henüz çok yenidir ve yardımınıza ihtiyaç duymaktadır.
+Bu belgeler topluluk tarafından geliştirildikçe gelişecektir.
+Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.
+====
+
 == Belgeler Hakkında
 
 Bu belgelerin kaynak kodu https://github.com/yazbel/belgeler[GitHub'ta tutulmaktadır].

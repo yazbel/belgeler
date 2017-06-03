@@ -16,6 +16,13 @@
 Android belgelerine hoşgeldiniz!
 Burada Android ile ilgili belgeler bulabilirsiniz.
 
+[WARNING]
+====
+Buradaki belgeler henüz çok yenidir ve yardımınıza ihtiyaç duymaktadır.
+Bu belgeler topluluk tarafından geliştirildikçe gelişecektir.
+Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.
+====
+
 == Belgeler Hakkında
 
 Bu belgelerin kaynak kodu https://github.com/yazbel/belgeler[GitHub'ta tutulmaktadır].
