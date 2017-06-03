@@ -5,8 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.5">
-<meta name="author" content="İsmail Arılık">
-<title>Ruby Belgeleri</title>
+<title>Ruby Kılavuzu</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -418,265 +417,74 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-.listingblock .pygments .hll { background-color: #ffffcc }
-.listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
-.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
-.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
-.listingblock .pygments .tok-o { color: #666666 } /* Operator */
-.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
-.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
-.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
-.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
-.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
-.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
-.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
-.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
-.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
-.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
-.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
-.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
-.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
-.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
-.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
-.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
-.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
-.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
-.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
-.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
-.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
-.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
-.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
-.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
-.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
-.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
-.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
-.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
-.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
-.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
-.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
-.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
-.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
-.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
-.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
-.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
-.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
-.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
-.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
-.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
-.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
-.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
-.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
-.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
-</style>
 </head>
-<body class="book toc2 toc-left">
+<body class="book">
 <div id="header">
-<h1>Ruby Belgeleri</h1>
-<div class="details">
-<span id="author" class="author">İsmail Arılık</span><br>
-<span id="email" class="email"><a href="mailto:arilik.ismail@gmail.com">arilik.ismail@gmail.com</a></span><br>
-<span id="revnumber">sürüm 0.1,</span>
-<span id="revdate">13 Mayıs, 2017, YazBel Ruby Belgeleri</span>
-</div>
-<div id="toc" class="toc2">
-<div id="toctitle">İçindekiler</div>
-<ul class="sectlevel1">
-<li><a href="#_belgeler_hakkında">Belgeler Hakkında</a>
-<ul class="sectlevel2">
-<li><a href="#_nasıl_yardım_alabilirim">Nasıl yardım alabilirim?</a></li>
-<li><a href="#_nasıl_yardım_edebilirim">Nasıl yardım edebilirim?</a></li>
-<li><a href="#_lisans">Lisans</a></li>
-</ul>
-</li>
-<li><a href="#_ruby_hakkında">Ruby Hakkında</a></li>
-<li><a href="#_kurulum">Kurulum</a>
-<ul class="sectlevel2">
-<li><a href="#_windows">Windows</a></li>
-<li><a href="#_mac_os_x">Mac OS X</a></li>
-<li><a href="#_gnu_linux">GNU/Linux</a></li>
-</ul>
-</li>
-<li><a href="#_kılavuz">Kılavuz</a></li>
-</ul>
-</div>
+<h1>Ruby Kılavuzu</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<script src="https://use.fontawesome.com/c38eb8c034.js"></script>
 <div class="paragraph">
-<p>Ruby belgelerine hoşgeldiniz!</p>
+<p>Bu kılavuz size Ruby&#8217;yi hızlı bir şekilde öğretmeyi amaçlamaktadır.
+Burada Ruby programlama dilinin temellerini öğrenirken daha kapsamlı kitaplara geçmek için de hazır hale geleceksiniz.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_belgeler_hakkında">Belgeler Hakkında</h2>
+<h2 id="_merhaba_dünya">Merhaba Dünya!</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Bu belgelerin kaynak kodu <a href="https://github.com/yazbel/belgeler">GitHub&#8217;ta tutulmaktadır</a>.</p>
-</div>
-<div class="sect2">
-<h3 id="_nasıl_yardım_alabilirim">Nasıl yardım alabilirim?</h3>
-<div class="paragraph">
-<p>Her zaman <a href="https://forum.yazbel.com/">YazBel forumu</a>nun <a href="https://forum.yazbel.com/c/ruby">Ruby kategorisi</a>nde bir konu açarak aklınızdaki soruları sorabilirsiniz.
-Topluluk size yardım etmekten mutluluk duyacaktır.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_nasıl_yardım_edebilirim">Nasıl yardım edebilirim?</h3>
-<div class="paragraph">
-<p>Birçok şekilde yardım edebilirsiniz:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Belgelerde değişiklik yaparak çekme isteği(pull request) gönderebilirsiniz.
-Yazım yanlışları ve küçük hatalar için GitHub arayüzünü kullanabilirsiniz ancak daha büyük ve karmaşık düzeltmeler için veri havuzunu bilgisayarınıza çekmeli, daha sonrasında düzeltmeleri yapıp çekme isteği göndermelisiniz.
-Her iki durumda da kısa ve öz bir işleme mesajı(commit message) yazdığınıza emin olmalısınız.</p>
-</li>
-<li>
-<p>Eğer bir yanlış gördünüz ancak bir sebepten ötürü düzeltmeyi kendiniz yapmak istemediyseniz, bu hatayı bildirerek de yardım edebilirsiniz.
-Bunun için veri havuzunun <a href="https://github.com/yazbel/belgeler/issues">konular(issues)</a> dizininde bir konu açın, başlık ve açıklama kısmına ilgili metinleri yazın ve gönderin.
-Başlık kısmının kısa ve öz olmasına dikkat edin.
-Ayrıca konuya, sağ taraftaki <strong>Labels</strong> bölümünden <code>ruby</code> etiketini eklediğinize de emin olun.</p>
-</li>
-<li>
-<p><a href="https://forum.yazbel.com/c/ruby">Forumun Ruby kategorisi</a>nde sorulan soruları cevaplayabilirsiniz.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_lisans">Lisans</h3>
-<div class="paragraph">
-<p><a href="https://github.com/yazbel/belgeler/blob/master/LICENSE"><code>LICENSE</code></a> dosyasında da belirtildiği üzere bu belgelerin lisansı <strong>Creative Commons Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</strong> lisansıdır.
-Daha fazla bilgi için lütfen dosyanın içeriğine bakınız.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ruby_hakkında">Ruby Hakkında</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://www.ruby-lang.org/tr/">Ruby</a>, <a href="https://tr.wikipedia.org/wiki/Yukihiro_Matsumoto">Yukihiro Matsumoto</a> tarafından 1993 yılında Japonya&#8217;da tasarlanmaya ve geliştirilmeye başlanmıştır.
-Verimlilik ve sadelik üzerine odaklanmış, açık kaynak kodlu dinamik bir dildir.
-Okumayı ve yazmayı kolaylaştıran, doğal bir sözdizimine sahiptir.
-Ayrıca günümüzün gözde programlama paradigmalarından olan nesneye yönelik programlama ve fonksiyonel programlama paradigmalarını güçlü bir şekilde desteklemektedir.
-Ruby özgür bir yazılımdır ve <a href="https://www.ruby-lang.org/en/about/license.txt">Ruby lisansı</a> ile lisanslanmıştır.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_kurulum">Kurulum</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Ruby&#8217;nin farklı işletim sistemlerinde farklı kurulumları vardır:</p>
-</div>
-<div class="sect2">
-<h3 id="_windows">Windows</h3>
-<div class="paragraph">
-<p>Ruby&#8217;yi Windows&#8217;a kurmanın en iyi yolu <a href="https://rubyinstaller.org/">RubyInstaller</a>'ı kullanmaktır.
-Siteye girip <strong>Download</strong> tuşuna basın ve en son Ruby sürümünü içeren kurucuyu indirip kurun.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mac_os_x">Mac OS X</h3>
-<div class="paragraph">
-<p>Mac OS X&#8217;te Ruby zaten kurulu gelmektedir, bu yüzden herhangi bir kuruluma gerek yoktur.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gnu_linux">GNU/Linux</h3>
-<div class="paragraph">
-<p>Ruby&#8217;yi GNU/Linux sisteminize paket yöneticileri aracılığıyla kolayca kurabilirsiniz:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Debian, Ubuntu</strong></p>
-<div class="listingblock">
-<div class="content">
-<pre>$ sudo apt-get install ruby-full</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>CentOS, Fedora, RHEL</strong></p>
-<div class="listingblock">
-<div class="content">
-<pre>$ sudo yum install ruby</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Gentoo</strong></p>
-<div class="listingblock">
-<div class="content">
-<pre>$ sudo emerge dev-lang/ruby</pre>
-</div>
-</div>
-</li>
-<li>
-<p><strong>Arch Linux</strong></p>
-<div class="listingblock">
-<div class="content">
-<pre>$ sudo pacman -S ruby</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Kurulumdan sonra şu komutla kurulumu doğrulayabilirsiniz:</p>
+<p>Bir programlama dili öğreten her kılavuzun bir "Merhaba dünya!" uygulaması ile başlaması gelenek halini almıştır.
+O halde hadi bir "Merhaba Dünya!" uygulaması yazalım:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$ ruby --version</pre>
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">puts "Merhaba Dünya!"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Bu komut sisteminizde kurulu Ruby sürümünü çıktı olarak vermelidir.
-Eğer bunun yerine bir hata alıyorsanız yukarıdaki kurulum adımlarını tekrarlamalısınız.</p>
+<p>Peki ama bu uygulamayı nasıl çalıştıracağız?</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_kılavuz">Kılavuz</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Kısa ve öz olarak yazılmış <a href="kilavuz/">bu kılavuz</a> ile adım adım ilerleyerek Ruby uygulama geliştirmeyi öğrenin!</p>
+<p>Bir Ruby uygulamasını çalıştırmanın en kolay yolu onu <em>etkileşimli Ruby(interactive Ruby)</em> ile çalıştırmaktır.
+Etkileşimli Ruby&#8217;yi açmak için bir uçbirim(terminal, konsol, shell) açın ve şu komutu girin:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">irb</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Şöyle bir ekran ile karşılaşmış olmalısınız:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>C:\Users\ismail\YazBel\belgeler&gt;irb
+irb(main):001:0&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Buradaki <code>&gt;</code> işareti, sizden bir Ruby uygulama satırı beklendiğini belirtmektedir.
+Yukarıdaki uygulama kodunu bu işaretten sonraki boşluğa yazın ve <code>Enter</code> tuşuna basın.
+Şöyle bir çıktı görmelisiniz:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">irb(main):001:0&gt; puts "Merhaba Dünya!"
+Merhaba Dünya!
+=&gt; nil</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Böylece, bir satır da olsa, Ruby ile ilk uygulamamızı yazmış ve çalıştırmış olduk!</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Sürüm 0.1<br>
-Son güncelleme 2017-06-03 09:44:56 T³rkiye Standart Saati
+Last updated 2017-05-24 20:48:47 T³rkiye Standart Saati
 </div>
 </div>
 </body>

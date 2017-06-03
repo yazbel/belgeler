@@ -1,0 +1,53 @@
+= Ruby Kılavuzu
+İsmail Arılık <arilik.ismail@gmail.com>
+0.1, 3 Haziran, 2017, YazBel Ruby Belgeleri Kılavuzu
+:version-label: Sürüm
+:last-update-label: Son güncelleme
+:icons: font
+:source-highlighter: pygments
+:source-language: ruby
+:toc: left
+:toc-title: İçindekiler
+
+Bu kılavuz size Ruby'yi hızlı bir şekilde öğretmeyi amaçlamaktadır.
+Burada Ruby programlama dilinin temellerini öğrenirken daha kapsamlı kitaplara geçmek için de hazır hale geleceksiniz.
+
+== Merhaba Dünya!
+
+Bir programlama dili öğreten her kılavuzun bir "Merhaba dünya!" uygulaması ile başlaması gelenek halini almıştır.
+O halde hadi bir "Merhaba Dünya!" uygulaması yazalım:
+
+[source,ruby]
+----
+puts "Merhaba Dünya!"
+----
+
+Peki ama bu uygulamayı nasıl çalıştıracağız?
+
+Bir Ruby uygulamasını çalıştırmanın en kolay yolu onu _etkileşimli Ruby(interactive Ruby)_ ile çalıştırmaktır.
+Etkileşimli Ruby'yi açmak için bir uçbirim(terminal, konsol, shell) açın ve şu komutu girin:
+
+[source,ruby]
+----
+irb
+----
+
+Şöyle bir ekran ile karşılaşmış olmalısınız:
+
+----
+C:\Users\ismail\YazBel\belgeler>irb
+irb(main):001:0>
+----
+
+Buradaki `>` işareti, sizden bir Ruby uygulama satırı beklendiğini belirtmektedir.
+Yukarıdaki uygulama kodunu bu işaretten sonraki boşluğa yazın ve `Enter` tuşuna basın.
+Şöyle bir çıktı görmelisiniz:
+
+[source,ruby]
+----
+irb(main):001:0> puts "Merhaba Dünya!"
+Merhaba Dünya!
+=> nil
+----
+
+Böylece, bir satır da olsa, Ruby ile ilk uygulamamızı yazmış ve çalıştırmış olduk!

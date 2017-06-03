@@ -99,3 +99,7 @@ $ ruby --version
 
 Bu komut sisteminizde kurulu Ruby sürümünü çıktı olarak vermelidir.
 Eğer bunun yerine bir hata alıyorsanız yukarıdaki kurulum adımlarını tekrarlamalısınız.
+
+== Kılavuz
+
+Kısa ve öz olarak yazılmış link:kilavuz/[bu kılavuz] ile adım adım ilerleyerek Ruby uygulama geliştirmeyi öğrenin!
