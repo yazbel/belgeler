@@ -76,3 +76,160 @@ Beautiful Soup 4'ü kurmanın herkes için çalışacak en hızlı kurulum şekl
 ----
 pip3 install beautifulsoup4
 ----
+== QUİCK START
+
+Bu bölümü atladım ilerde ekleriz.
+
+== "Soup" İnşa Nesnesi oluşturalım
+
+Bir dökümanı ayrıştırmadan(parse) önce beautifulsoup4 bizden bir Constructor yani bir inşa nesnesi oluşturmamızı isteyecek ,inşa aracının içinde string barındırabileceğimiz gibi bir dosyadan çağırdığımız verileride barındırabiliriz.
+İçinde işleyeceğimiz verileri barındıran BeautifulSoup() nesnemizi çağıralım.
+
+[source]
+from bs4 import BeautifulSoup
+
+Oluşturulan nesnemizi örnekleyerek işyeceğimiz verileri içine aktarıyoruz.
+
+[source]
+soup=BeautifulSoup(" <html>işlenecek veri</html> ")
+
+Aktaracağımız verileri bir dosyadan okuyabileceğimizi de biliyorsunuz.
+
+[source]
+
+from bs4 import BeautifulSoup
+with open("index.html") as fp:
+  soup=BeautifulSoup(fp)
+
+----
+ekle: html dosyasındaki veriler işlenmeye hazırlanması için unicode ediliyor.
+html tagları içindeki verilerde unicode karakterlerine dönüştürülüyor
+----
+
+Başlangıç tanımlamalarını yaptıktan sonra verilerimiz mevcut ayrıştırıcılarla en iyi şekilde işlenecektir.Bs4 kütüphanesi html ayrıştırma işlemlerinde kendi bünyesindeki ayrıştırıcıları kullanıyor olsa da isteğimiz doğrultusunda  bazı standart ve 3. parti moduller ile de uyumlu çalışmaktadır.
+(XML Parser)
+
+
+== Nesne Türleri
+
+Beautiful Soup python un dizin ağacına html veri(document) dönüşümler yapmaktadır.Bu işlemler çoğu zaman karışık ve can sıkıcı olabilmektedir Bs kütüphanesinin bize sağladı bazı özellikler sayesinde biz sadece 4 çesit nesne ile ilgileneceğiz Bunlar;
+
+. tag
+. NavigableString
+. BeautifulSoup
+. Comment
+
+---
+
+=== Tag
+
+Tag nesnesi orjinal dökümanda html veya xml ile haberleşmemizi sağlar.
+
+[source]
+soup=BeautifulSoup("<b class="boldest">Extremly Bold </b>")
+tag=soup.b
+type(tag)
+#<class 'bs4.element.Tag'>
+
+Tag'lar çeşitli nitelik ve metodlara sahip olabilir.İleri ki kısımlarda üstünden daha ayrıntılı geçeceğiz.Şimdi Tag'ların en önemli özelliklerinden olan name nedir ona geçelim.
+
+
+=== Name
+
+Her tag nesnesi bir isme sahiptir.bir tag'ın ismine ulaşmak için .name kullanılır.
+
+[source]
+tag.Name
+#u'b'
+
+Eğer bir tagın ismini değiştirirsek bu değişiklik tüm html yapısına yansıyacaktır tabiki Beautiful Soup sayesinde.
+
+[source]
+tag.name="mehmet"
+tag.name
+type(tag)
+
+Böylece tag'ımızın yansımalarını daha iyi görebiliyoruz.
+
+===  Attributes
+
+Tag'larımız herzaman düşündüğümüz kadar sade bir yapıda olmayacaktır.İçinde birden fazla nitelik barındırabilir.Mesela <b id="boldest"> buradaki tag'ımız sadece id niteliği(attribute) almış değeri(value) ise "boldest" olarak tanımlanmış.
+Bir tag'ın herhangi bir niteliğine ihtiyaç duyduğumuz zamanlarda  bu değerlere erişim sağlayabiliriz.
+[source]
+
+tag["id"]
+#u'boldest'
+
+gördüğünüz gibi önceki kısımlarda tanımladığımız tag'ı halen kullanabilmekteyiz üstelik id değerine ulaşabiliyoruz.Burdaki kullanımdan anlaşılacağı üzere tag isimlerimiz(name) birer sözlük şeklinde tutuluyor.Tüm bir sözlüğe ulaşmak için .attrs kullanalım:
+
+[source]
+tag.attrs
+#{u'id':'boldest'}
+
+Bir tag'ın niteliklerine erişim sağladık ve görüntüledik.Artık bi sözlük olarak elde ettiğimiz nitelikler üzerinde ekleme ve silme işlemi yapabiliriz.Gerekli iyileştirmeleri inceleyin ve kullanımına dair çıkarımda bulunun:
+
+[source]
+tag['id'='ahmet'
+tag['baska-bir-nitelik']=1
+# <b baska-bir-nitelik="1" id="ahmet"></b>
+
+[source]
+del tag['id']  #del silmek anlamına geliştirildikçe
+del tag['baska-bir-nitelik']
+tag
+#<b></b>
+tag['id']
+#KeyError: 'id'
+print(tag.get('id'))
+#None
+
+
+=== Multi-valued attributes
+
+HTML 4 ile birlikte bir kaç nitelik birden fazla değer alabiliyordu.Html 5 yayınlanmasıyla çoklu değer tanımlamaları büyük ölçüde kaldırıldı ama halen kullanılmakta olanlar var.Bunlardan en yaygın kullanılanı "*class*"tır.
+Özniteliklerin aldıkları değerler liste biçiminde tutulmaktadır.
+
+[source]
+css_soup = BeautifulSoup('<p class="body"></p>')
+css_soup.p['class']
+# ["body"]
+
+css_soup.p tag alanına girdikten sonra class öğesine nasıl eriştiğimize dikkat edin.
+
+[source]
+css_soup = BeautifulSoup('<p class="body strikeout"></p>')
+css_soup.p['class']
+# ["body", "strikeout"]
+
+Üstteki örneğin aksine classs niteliğimiz burada 2 değer almıştır aslında multiple-valued(birdenn fazla değere sahip olma) tam olarak bu örneğe karşılık geliyor.Çıktımıza dikkat ettiyseniz *body* ve *strikeout* değerlerinin nasıl listeli bir şekilde ayrıldığını gördünüz.Bu kullanıma sys.argv ve .split("") kullanımlarında da rastlanıyor.
+
+Ayrı yazılan değerlerin her zaman multiple-valued olmadığını söylemekte fayda var.Aşağıdaki kod bloğunu bilgisayarımızda test edince beklendiği gibi bir liste ile karşılaşmadık.Bunun nedeni kısaca bahsettiğimiz html sürümlerinin tasarımından kaynaklanmaktadır.
+
+
+
+[source]
+id_soup = BeautifulSoup('<p id="my id"></p>')
+id_soup.p['id']
+# 'my id'
+
+.Multiple-Valued Attributes Listesi
+*rel,rev,charset,headers,accesskey*
+
+[source]
+rel_soup = BeautifulSoup('<p>Back to the <a rel="index">homepage</a></p>')
+rel_soup.a['rel']
+# ['index']
+rel_soup.a['rel'] = ['index', 'contents']
+print(rel_soup.p)
+# <p>Back to the <a rel="index contents">homepage</a></p>
+
+peki id örneğinde aldığımız tek değeri list halinde almak istersek ne yapacağız bunu temel python bilgimizle kolayca yapabilsekte beautiful soup bize *.get_attribute_list* kolaylığını sunmuştur.Hemen bir test edelim:
+
+[source]
+
+id_soup.p.get_attribute_list(‘id’)
+ # [“my id”]
+
+Aldığımız çıktıya dikkat edelim liste tipinde aldık bunu type() ile sizde görebilirsiniz.
+
+==  Devam
