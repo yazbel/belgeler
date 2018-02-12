@@ -1,10 +1,15 @@
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Python Belgeleri</title>
-      <style>
-        #wrapper {width: 960px; margin: 0 auto;}
-        /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="author" content="YazBel Topluluğu">
+<title>Python Belgeleri</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
 /* Remove comment around @import statement below when using as a custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -13,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -48,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -60,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -115,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -411,48 +417,125 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
-
-      </style>
-      <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/asciidoc.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/yaml.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/dockerfile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/makefile.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/rust.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/haskell.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/typescript.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scss.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/less.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/handlebars.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/groovy.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/ini.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
-    </head>
-    <body>
-      <div id="wrapper">
-        <div class="article">
-          <h1 id="__asciidoctor-preview-440__">Python Belgeleri</h1>
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
+.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+.listingblock .pygments .tok-o { color: #666666 } /* Operator */
+.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
+.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
+.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
+.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Python Belgeleri</h1>
+<div class="details">
+<span id="author" class="author">YazBel Topluluğu</span><br>
+<span id="revnumber">sürüm 0.1,</span>
+<span id="revdate">13 Mayıs, 2017, YazBel Python Belgeleri</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">İçindekiler</div>
+<ul class="sectlevel1">
+<li><a href="#_belgeler_hakkında">Belgeler Hakkında</a>
+<ul class="sectlevel2">
+<li><a href="#_nasıl_yardım_alabilirim">Nasıl yardım alabilirim?</a></li>
+<li><a href="#_nasıl_yardım_edebilirim">Nasıl yardım edebilirim?</a></li>
+<li><a href="#_lisans">Lisans</a></li>
+</ul>
+</li>
+<li><a href="#_python_hakkında">Python Hakkında</a></li>
+<li><a href="#_kurulum">Kurulum</a>
+<ul class="sectlevel2">
+<li><a href="#_windows_ta_kurulum">Windows&#8217;ta Kurulum</a></li>
+<li><a href="#_mac_te_kurulum">Mac&#8217;te Kurulum</a></li>
+<li><a href="#_linux_te_kurulum">Linux&#8217;te Kurulum</a></li>
+</ul>
+</li>
+<li><a href="#_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <script src="https://use.fontawesome.com/c38eb8c034.js"></script>
-<div id="__asciidoctor-preview-498__" class="paragraph">
+<div class="paragraph">
 <p>Python belgelerine hoşgeldiniz!</p>
 </div>
-<div id="__asciidoctor-preview-514__" class="admonitionblock warning">
+<div class="admonitionblock warning">
 <table>
 <tr>
 <td class="icon">
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-<div id="__asciidoctor-preview-518__" class="paragraph">
+<div class="paragraph">
 <p>Buradaki belgeler henüz çok yenidir ve yardımınıza ihtiyaç duymaktadır.
 Bu belgeler topluluk tarafından geliştirildikçe gelişecektir.
 Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.</p>
@@ -462,54 +545,26 @@ Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.</p>
 </table>
 </div>
 </div>
-<div id="toc" class="toc">
-<div id="toctitle">İçindekiler</div>
-<ul class="sectlevel1">
-<li><a href="#_belgeler_hakk_nda">Belgeler Hakkında</a>
-<ul class="sectlevel2">
-<li><a href="#_nas_l_yard_m_alabilirim">Nasıl yardım alabilirim?</a></li>
-<li><a href="#_nas_l_yard_m_edebilirim">Nasıl yardım edebilirim?</a></li>
-<li><a href="#_lisans">Lisans</a></li>
-</ul>
-</li>
-<li><a href="#_python_hakk_nda">Python Hakkında</a></li>
-<li><a href="#_kurulum">Kurulum</a>
-<ul class="sectlevel2">
-<li><a href="#_windows_ta_kurulum">Windows&#8217;ta Kurulum</a></li>
-<li><a href="#_mac_te_kurulum">Mac&#8217;te Kurulum</a></li>
-<li><a href="#_linux_te_kurulum">Linux&#8217;te Kurulum</a></li>
-</ul>
-</li>
-<li><a href="#_karakter_dizisi_bi_imlendirme">Karakter Dizisi Biçimlendirme</a>
-<ul class="sectlevel2">
-<li><a href="#_f_string">F-string</a></li>
-<li><a href="#_neden_f_string">Neden f-string</a></li>
-<li><a href="#__rnekler">Örnekler</a></li>
-</ul>
-</li>
-<li><a href="#_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</a></li>
-</ul>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_belgeler_hakk_nda">Belgeler Hakkında</h2>
+<h2 id="_belgeler_hakkında">Belgeler Hakkında</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-534__" class="paragraph">
+<div class="paragraph">
 <p>Bu belgelerin kaynak kodu <a href="https://github.com/yazbel/belgeler">GitHub&#8217;ta tutulmaktadır</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="_nas_l_yard_m_alabilirim">Nasıl yardım alabilirim?</h3>
-<div id="__asciidoctor-preview-556__" class="paragraph">
+<h3 id="_nasıl_yardım_alabilirim">Nasıl yardım alabilirim?</h3>
+<div class="paragraph">
 <p>Her zaman <a href="https://forum.yazbel.com/">YazBel forumu</a>nun <a href="https://forum.yazbel.com/c/python">Python kategorisi</a>nde bir konu açarak aklınızdaki soruları sorabilirsiniz.
 Topluluk size yardım etmekten mutluluk duyacaktır.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_nas_l_yard_m_edebilirim">Nasıl yardım edebilirim?</h3>
-<div id="__asciidoctor-preview-580__" class="paragraph">
+<h3 id="_nasıl_yardım_edebilirim">Nasıl yardım edebilirim?</h3>
+<div class="paragraph">
 <p>Birçok şekilde yardım edebilirsiniz:</p>
 </div>
-<div id="__asciidoctor-preview-586__" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p>Belgelerde değişiklik yaparak çekme isteği(pull request) gönderebilirsiniz.
@@ -530,7 +585,7 @@ Ayrıca konuya, sağ taraftaki <strong>Labels</strong> bölümünden <code>pytho
 </div>
 <div class="sect2">
 <h3 id="_lisans">Lisans</h3>
-<div id="__asciidoctor-preview-636__" class="paragraph">
+<div class="paragraph">
 <p><a href="https://github.com/yazbel/belgeler/blob/master/LICENSE"><code>LICENSE</code></a> dosyasında da belirtildiği üzere bu belgelerin lisansı <strong>Creative Commons Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası (CC BY-NC-SA 4.0)</strong> lisansıdır.
 Daha fazla bilgi için lütfen dosyanın içeriğine bakınız.</p>
 </div>
@@ -538,22 +593,22 @@ Daha fazla bilgi için lütfen dosyanın içeriğine bakınız.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_python_hakk_nda">Python Hakkında</h2>
+<h2 id="_python_hakkında">Python Hakkında</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-656__" class="paragraph">
+<div class="paragraph">
 <p>Python programlama dili Hollandalı programcı Guido Van Rossum tarafından 1991 yılında tasarlanıp gerçeklenmeye başlanmış bir programlama dilidir.
 Python en başta kolay okunup yazılabilirliği ile dikkat çekmektedir.
 Ayrıca C ve C++ gibi dillerin aksine, derlenmeye gerek olmadan çalışabildiği için hızlı bir şekilde uygulama geliştirilebilmesine de olanak sağlamaktadır.
 Python zamanımızın gözde programlama paradigmalarından olan nesneye yönelik programlama paradigmasını desteklemektedir.
 Python programlama dili genel amaçlı bir programlama dilidir ve masaüstü programlamadan web sunucu programlamaya, sistem programlamadan oyun programlamaya kadar birçok alanda kullanılmaktadır.</p>
 </div>
-<div id="__asciidoctor-preview-660__" class="paragraph">
+<div class="paragraph">
 <p>Python oldukça gözde bir betik geliştirme dilidir, özellikle GNU/Linux dünyasında.
-Python Google'ın resmi olarak kullandığı ve desteklediği üç dilden biri, ayrıca tek betikleme dilidir.
+Python Google&#8217;ın resmi olarak kullandığı ve desteklediği üç dilden biri, ayrıca tek betikleme dilidir.
 Python yurt içi ve dışı birçok üniversite müfredatında da özellikle programlamaya giriş ve bilimsel programlama derslerinde yerini almıştır.
 Python programlama dili, <a href="https://en.wikipedia.org/wiki/Python_Software_Foundation_License"><strong>Python Yazılım Vakfı Lisansı</strong></a> altında dağıtılan özgür bir yazılımdır.</p>
 </div>
-<div id="__asciidoctor-preview-664__" class="paragraph">
+<div class="paragraph">
 <p>İştahınız kabarmış olmalı!
 Ancak hepsi bu kadar değil.
 Python ile uygulama geliştirmek için sizi bunlardan daha çok motive edecek bir şey var: <strong>Eğlence</strong>.
@@ -565,12 +620,12 @@ Python ile ilk uygulamanızı geliştirdiğinizde ve sonucunu ekranda gördüğ�
 <div class="sect1">
 <h2 id="_kurulum">Kurulum</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-678__" class="paragraph">
-<p>Python'ın farklı işletim sistemlerinde farklı kurulumları vardır:</p>
+<div class="paragraph">
+<p>Python&#8217;ın farklı işletim sistemlerinde farklı kurulumları vardır:</p>
 </div>
 <div class="sect2">
 <h3 id="_windows_ta_kurulum">Windows&#8217;ta Kurulum</h3>
-<div id="__asciidoctor-preview-698__" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><a href="https://www.python.org/downloads/">Python indirmeler sayfası</a>ndan <strong>Download Python 3.x.x</strong> tuşuna tıklayın ve kurucu programın indirilmesini bekleyin.</p>
@@ -580,15 +635,15 @@ Python ile ilk uygulamanızı geliştirdiğinizde ve sonucunu ekranda gördüğ�
 </li>
 <li>
 <p>Komut İstemi&#8217;nde şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
-<div id="__asciidoctor-preview-742__" class="listingblock">
+<div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">&gt; py -3
-Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
+<pre class="pygments highlight"><code data-lang="bash">&gt; py -3
+Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>MSC v.1900 <span class="tok-m">32</span> bit <span class="tok-o">(</span>Intel<span class="tok-o">)]</span> on win32
+Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
 </div>
 </div>
-<div id="__asciidoctor-preview-746__" class="paragraph">
+<div class="paragraph">
 <p>Verdiğimiz komut sonrası <em>Python etkileşimli kabuğu</em>nun açılması ve <code>&gt;&gt;&gt;</code> işaretinden sonra bizden komut beklenmesi, kurulumumuzun başarılı olduğunu gösteriyor.</p>
 </div>
 </li>
@@ -597,7 +652,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 </div>
 <div class="sect2">
 <h3 id="_mac_te_kurulum">Mac&#8217;te Kurulum</h3>
-<div id="__asciidoctor-preview-768__" class="ulist">
+<div class="ulist">
 <ul>
 <li>
 <p><a href="https://www.python.org/downloads/">Python indirmeler sayfası</a>ndan <strong>Download Python 3.x.x</strong> tuşuna tıklayın ve kurucu programın indirilmesini bekleyin.</p>
@@ -607,15 +662,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 </li>
 <li>
 <p>Terminal&#8217;de şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
-<div id="__asciidoctor-preview-812__" class="listingblock">
+<div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ python3
-Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
+<pre class="pygments highlight"><code data-lang="bash">$ python3
+Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>GCC <span class="tok-m">4</span>.2.1 <span class="tok-o">(</span>Apple Inc. build <span class="tok-m">5666</span><span class="tok-o">)</span> <span class="tok-o">(</span>dot <span class="tok-m">3</span><span class="tok-o">)]</span> on darwin
+Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
 </div>
 </div>
-<div id="__asciidoctor-preview-816__" class="paragraph">
+<div class="paragraph">
 <p>Verdiğimiz komut sonrası <em>Python etkileşimli kabuğu</em>nun açılması ve <code>&gt;&gt;&gt;</code> işaretinden sonra bizden komut beklenmesi, kurulumumuzun başarılı olduğunu gösteriyor.</p>
 </div>
 </li>
@@ -624,127 +679,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 </div>
 <div class="sect2">
 <h3 id="_linux_te_kurulum">Linux&#8217;te Kurulum</h3>
-<div id="__asciidoctor-preview-836__" class="paragraph">
+<div class="paragraph">
 <p>Eğer Linux kullanıyorsanız o zaman Python sizde zaten kuruludur, herhangi bir şey yapmanıza gerek yok.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_karakter_dizisi_bi_imlendirme">Karakter Dizisi Biçimlendirme</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_f_string">F-string</h3>
-<div id="__asciidoctor-preview-868__" class="paragraph">
-<p>%-biçimlendirme ve <code>format()</code> metodu ile biçimlendirme yerine <strong>Python 3.6</strong> bize 3. bir biçimlendirme mekaniği sunuyor.</p>
-</div>
-<div id="__asciidoctor-preview-872__" class="paragraph">
-<p>Bunun adı "Literal String Interpolation" yani "Karakter Dizisi Aradeğerlemesi" demektir (<a href="https://www.python.org/dev/peps/pep-0498/">PEP-498</a>). Bu mekaniği kullanan dizilere "Biçimlendirilmiş Karakter Dizisi" anlanımna gelen <strong>"f-string"(formatted-string)</strong> adı veriliyor.</p>
-</div>
-<div id="__asciidoctor-preview-876__" class="paragraph">
-<p>Bu yeni mekanik önceki metotların yerini almak ya da onları eskitmektense, onların dezavantajlarına bir alternatif olma amacıyla kurulmuş.</p>
-</div>
-<div id="__asciidoctor-preview-880__" class="paragraph">
-<p>F-stringler bize en az syntax ile dizi içerisine python ifadelerini yerleştirme/gömme becerisi sağlıyor.Bu dizilerin başında "f" harfi yer almaktadır tıpkı <strong>Python2</strong>'de unicode olarak belirtmek isteğimiz dizilerin başına "u" harfini koyduğumuz gibi.</p>
-</div>
-<div id="__asciidoctor-preview-884__" class="paragraph">
-<p>F-string yapısı:
-<code>f "&lt;metin&gt;{&lt;ifade&gt;&lt;isteğe bağlı !s, !r, ya da !a&gt;&lt;isteğe bağlı : biçimlendirici&gt;}&lt;metin&gt; &#8230;&#8203; "</code></p>
-</div>
-<div id="__asciidoctor-preview-888__" class="paragraph">
-<p>Örnek:</p>
-</div>
-<div id="__asciidoctor-preview-900__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; import datetime
-&gt;&gt;&gt; ad = "YazBel"
-&gt;&gt;&gt; tarih = datetime.date(2018,2,12)
-&gt;&gt;&gt; f"Bu sitenin adı {ad}, bu yazı {tarih:%A, %B %d, %Y} tarihinde yazıldı"
-'Bu sitenin adı Yazbel, bu yazı Monday, February 12, 2018 tarihinde yazıldı'</code></pre>
-</div>
-</div>
-<div id="__asciidoctor-preview-904__" class="paragraph">
-<p>Gördüğünüz gibi diziler <code>f"dizi"</code> şeklinde başında "f" olacak şekilde yazılmış ve <code>format()</code> metodundaki gibi kelebek parantez <code>{}</code> içermektedir, fakat <code>format()</code>
-metodu kaldırılmış, bu durumda değişkenlerimizi direkt olarak parantezlerin içine yazıyoruz, nasıl gösterilceklerini de(biçimlendirme ayarı) her zamanki gibi iki noktanın ":" önüne yazıyoruz.</p>
-</div>
-<div id="__asciidoctor-preview-914__" class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code> <a href="https://belgeler.yazbel.com/python-istihza/standart_moduller/datetime.html#strftime">modülü</a> için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_neden_f_string">Neden f-string</h3>
-<div id="__asciidoctor-preview-934__" class="paragraph">
-<p>%-biçimlendirmenin dezavantajı sadece sayılar ve dizileri desteklemesidir, diğer veri tipleri ya desteklenmiyor ya da biçimlendirmeden önce desteklenen tiplere çeviriliyor. Diğer bilinen sorunu ise sadece tek değer taşıyor olması, örnekte de görüceğiniz gibi demetlerin tüm değerleri diziye yerleştirilmiyor:</p>
-</div>
-<div id="__asciidoctor-preview-946__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; msj = ("disk hatası", 32)
-&gt;&gt;&gt; "hata: %s" % msj
-Traceback (most recent call last):
-  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
-TypeError: not all arguments converted during string formatting</code></pre>
-</div>
-</div>
-<div id="__asciidoctor-preview-952__" class="paragraph">
-<p>Fakat f-string ile:</p>
-</div>
-<div id="__asciidoctor-preview-964__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; f"hata: {msj}"
-"hata: ('disk hatası', 32)"</code></pre>
-</div>
-</div>
-<div id="__asciidoctor-preview-970__" class="paragraph">
-<p><code>format()</code> metodunun dezavantajı ise aşırı detaya neden olmasıdır, özellikle de parametreler çok olunca:</p>
-</div>
-<div id="__asciidoctor-preview-982__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; ad = "YazBel"
-&gt;&gt;&gt; yıl = 2018
-&gt;&gt;&gt; ay = "Şubat"
-&gt;&gt;&gt; gün = 12
-&gt;&gt;&gt; "Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".format(ad=ad, ay=ay, yıl=yıl, gün=gün)
-"Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"</code></pre>
-</div>
-</div>
-<div id="__asciidoctor-preview-988__" class="paragraph">
-<p>Fakat f-string ile:</p>
-</div>
-<div id="__asciidoctor-preview-1000__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; f"Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".
-"Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"</code></pre>
-</div>
-</div>
-<div id="__asciidoctor-preview-1004__" class="paragraph">
-<p>Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine her türlü python kodu yazabilirsiniz.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="__rnekler">Örnekler</h3>
-<div id="__asciidoctor-preview-1028__" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; genişlik = 10
-&gt;&gt;&gt; hassasiyet = 4
-&gt;&gt;&gt; value = decimal.Decimal("12.34567")
-&gt;&gt;&gt; f"result: {value:{genişlik}.{hassasiyet}}"
-'result:      12.35'
-&gt;&gt;&gt; tarih = datetime(year=2017, month=1, day=27)
-&gt;&gt;&gt; f"{tarih:%B %d, %Y}"
-'January 27, 2017'
-&gt;&gt;&gt; number = 1024
-&gt;&gt;&gt; f"{number:#0x}"  # Hexadecimal değere çevirme
-'0x400'</code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -752,13 +688,18 @@ TypeError: not all arguments converted during string formatting</code></pre>
 <div class="sect1">
 <h2 id="_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</h2>
 <div class="sectionbody">
-<div id="__asciidoctor-preview-1048__" class="paragraph">
-<p>Beautiful Soup Python'ın gözde HTML ve XML çözümleme kütüphanesidir.
+<div class="paragraph">
+<p>Beautiful Soup Python&#8217;ın gözde HTML ve XML çözümleme kütüphanesidir.
 Belgeler için <a href="beautiful-soup/">tıklayın</a>.</p>
 </div>
 </div>
 </div>
-        </div>
-      </div>
-    </body>
-  </html>
+</div>
+<div id="footer">
+<div id="footer-text">
+Sürüm 0.1<br>
+Son güncelleme 2017-06-03 10:06:20 T³rkiye Standart Saati
+</div>
+</div>
+</body>
+</html>
