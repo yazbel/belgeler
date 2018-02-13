@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="author" content="YazBel Topluluğu">
 <title>Python Belgeleri</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -90,13 +90,12 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -132,7 +131,11 @@ strong strong{font-weight:400}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -199,7 +202,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -255,13 +258,13 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -282,10 +285,12 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -302,7 +307,8 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -365,6 +371,7 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -491,7 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </style>
 </head>
-<body class="book toc2 toc-left">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Python Belgeleri</h1>
 <div class="details">
@@ -515,6 +522,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_windows_ta_kurulum">Windows&#8217;ta Kurulum</a></li>
 <li><a href="#_mac_te_kurulum">Mac&#8217;te Kurulum</a></li>
 <li><a href="#_linux_te_kurulum">Linux&#8217;te Kurulum</a></li>
+</ul>
+</li>
+<li><a href="#_karakter_dizisi_biçimlendirme">Karakter Dizisi Biçimlendirme</a>
+<ul class="sectlevel2">
+<li><a href="#_f_string">F-string</a></li>
+<li><a href="#_neden_f_string">Neden f-string</a></li>
+<li><a href="#_örnekler">Örnekler</a></li>
 </ul>
 </li>
 <li><a href="#_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</a></li>
@@ -637,7 +651,7 @@ Python ile ilk uygulamanızı geliştirdiğinizde ve sonucunu ekranda gördüğ�
 <p>Komut İstemi&#8217;nde şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash">&gt; py -3
+<pre class="pygments highlight"><code data-lang="bash"><span></span>&gt; py -3
 Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>MSC v.1900 <span class="tok-m">32</span> bit <span class="tok-o">(</span>Intel<span class="tok-o">)]</span> on win32
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
@@ -664,7 +678,7 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 <p>Terminal&#8217;de şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash">$ python3
+<pre class="pygments highlight"><code data-lang="bash"><span></span>$ python3
 Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>GCC <span class="tok-m">4</span>.2.1 <span class="tok-o">(</span>Apple Inc. build <span class="tok-m">5666</span><span class="tok-o">)</span> <span class="tok-o">(</span>dot <span class="tok-m">3</span><span class="tok-o">)]</span> on darwin
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
@@ -686,6 +700,125 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 </div>
 </div>
 <div class="sect1">
+<h2 id="_karakter_dizisi_biçimlendirme">Karakter Dizisi Biçimlendirme</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_f_string">F-string</h3>
+<div class="paragraph">
+<p>%-biçimlendirme ve <code>format()</code> metodu ile biçimlendirme yerine <strong>Python 3.6</strong> bize 3. bir biçimlendirme mekaniği sunuyor.</p>
+</div>
+<div class="paragraph">
+<p>Bunun adı "Literal String Interpolation" yani "Karakter Dizisi Aradeğerlemesi" demektir (<a href="https://www.python.org/dev/peps/pep-0498/">PEP-498</a>). Bu mekaniği kullanan dizilere "Biçimlendirilmiş Karakter Dizisi" anlanımna gelen <strong>"f-string"(formatted-string)</strong> adı veriliyor.</p>
+</div>
+<div class="paragraph">
+<p>Bu yeni mekanik önceki metotların yerini almak ya da onları eskitmektense, onların dezavantajlarına bir alternatif olma amacıyla kurulmuş.</p>
+</div>
+<div class="paragraph">
+<p>F-stringler bize en az syntax ile dizi içerisine python ifadelerini yerleştirme/gömme becerisi sağlıyor.Bu dizilerin başında "f" harfi yer almaktadır tıpkı <strong>Python2</strong>'de unicode olarak belirtmek isteğimiz dizilerin başına "u" harfini koyduğumuz gibi.</p>
+</div>
+<div class="paragraph">
+<p>F-string yapısı:
+<code>f "&lt;metin&gt;{&lt;ifade&gt;&lt;isteğe bağlı !s, !r, ya da !a&gt;&lt;isteğe bağlı : biçimlendirici&gt;}&lt;metin&gt; &#8230;&#8203; "</code></p>
+</div>
+<div class="paragraph">
+<p>Örnek:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-kn">import</span> <span class="tok-nn">datetime</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">tarih</span> <span class="tok-o">=</span> <span class="tok-n">datetime</span><span class="tok-o">.</span><span class="tok-n">date</span><span class="tok-p">(</span><span class="tok-mi">2018</span><span class="tok-p">,</span><span class="tok-mi">2</span><span class="tok-p">,</span><span class="tok-mi">12</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {tarih:%A, %B </span><span class="tok-si">%d</span><span class="tok-s2">, %Y} tarihinde yazıldı&quot;</span>
+<span class="tok-s1">&#39;Bu sitenin adı Yazbel, bu yazı Monday, February 12, 2018 tarihinde yazıldı&#39;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Gördüğünüz gibi diziler <code>f"dizi"</code> şeklinde başında "f" olacak şekilde yazılmış ve <code>format()</code> metodundaki gibi kelebek parantez <code>{}</code> içermektedir, fakat <code>format()</code>
+metodu kaldırılmış, bu durumda değişkenlerimizi direkt olarak parantezlerin içine yazıyoruz, nasıl gösterilceklerini de(biçimlendirme ayarı) her zamanki gibi iki noktanın ":" önüne yazıyoruz.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code> <a href="https://belgeler.yazbel.com/python-istihza/standart_moduller/datetime.html#strftime">modülü</a> için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neden_f_string">Neden f-string</h3>
+<div class="paragraph">
+<p>%-biçimlendirmenin dezavantajı sadece sayılar ve dizileri desteklemesidir, diğer veri tipleri ya desteklenmiyor ya da biçimlendirmeden önce desteklenen tiplere çeviriliyor. Diğer bilinen sorunu ise sadece tek değer taşıyor olması, örnekte de görüceğiniz gibi demetlerin tüm değerleri diziye yerleştirilmiyor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">msj</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-s2">&quot;disk hatası&quot;</span><span class="tok-p">,</span> <span class="tok-mi">32</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;hata: </span><span class="tok-si">%s</span><span class="tok-s2">&quot;</span> <span class="tok-o">%</span> <span class="tok-n">msj</span>
+<span class="tok-n">Traceback</span> <span class="tok-p">(</span><span class="tok-n">most</span> <span class="tok-n">recent</span> <span class="tok-n">call</span> <span class="tok-n">last</span><span class="tok-p">):</span>
+  <span class="tok-n">File</span> <span class="tok-s2">&quot;&lt;stdin&gt;&quot;</span><span class="tok-p">,</span> <span class="tok-n">line</span> <span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-ow">in</span> <span class="tok-o">&lt;</span><span class="tok-n">module</span><span class="tok-o">&gt;</span>
+<span class="tok-ne">TypeError</span><span class="tok-p">:</span> <span class="tok-ow">not</span> <span class="tok-nb">all</span> <span class="tok-n">arguments</span> <span class="tok-n">converted</span> <span class="tok-n">during</span> <span class="tok-n">string</span> <span class="tok-n">formatting</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Fakat f-string ile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;hata: {msj}&quot;</span>
+<span class="tok-s2">&quot;hata: (&#39;disk hatası&#39;, 32)&quot;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>format()</code> metodunun dezavantajı ise aşırı detaya neden olmasıdır, özellikle de parametreler çok olunca:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">yıl</span><span class="tok-o">=</span> <span class="tok-mi">2018</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ay</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Şubat&quot;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">gün</span><span class="tok-o">=</span> <span class="tok-mi">12</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span><span class="tok-n">format</span><span class="tok-p">(</span><span class="tok-n">ad</span><span class="tok-o">=</span><span class="tok-n">ad</span><span class="tok-p">,</span> <span class="tok-n">ay</span><span class="tok-o">=</span><span class="tok-n">ay</span><span class="tok-p">,</span> <span class="tok-n">yıl</span><span class="tok-o">=</span><span class="tok-n">yıl</span><span class="tok-p">,</span> <span class="tok-n">gün</span><span class="tok-o">=</span><span class="tok-n">gün</span><span class="tok-p">)</span>
+<span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Fakat f-string ile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span>
+<span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine her türlü python kodu yazabilirsiniz.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_örnekler">Örnekler</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">genişlik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">hassasiyet</span> <span class="tok-o">=</span> <span class="tok-mi">4</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">value</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {value:{genişlik}.{hassasiyet}}&quot;</span>
+<span class="tok-s1">&#39;result:      12.35&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">tarih</span> <span class="tok-o">=</span> <span class="tok-n">datetime</span><span class="tok-p">(</span><span class="tok-n">year</span><span class="tok-o">=</span><span class="tok-mi">2017</span><span class="tok-p">,</span> <span class="tok-n">month</span><span class="tok-o">=</span><span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-n">day</span><span class="tok-o">=</span><span class="tok-mi">27</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{tarih:%B </span><span class="tok-si">%d</span><span class="tok-s2">, %Y}&quot;</span>
+<span class="tok-s1">&#39;January 27, 2017&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">number</span> <span class="tok-o">=</span> <span class="tok-mi">1024</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{number:#0x}&quot;</span>  <span class="tok-c1"># Hexadecimal değere çevirme</span>
+<span class="tok-s1">&#39;0x400&#39;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -698,7 +831,7 @@ Belgeler için <a href="beautiful-soup/">tıklayın</a>.</p>
 <div id="footer">
 <div id="footer-text">
 Sürüm 0.1<br>
-Son güncelleme 2017-06-03 10:06:20 T³rkiye Standart Saati
+Son güncelleme 2018-02-13 23:01:05 Türkiye Standart Saati
 </div>
 </div>
 </body>
