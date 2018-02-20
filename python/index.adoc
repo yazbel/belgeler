@@ -27,6 +27,13 @@ Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.
 
 Bu belgelerin kaynak kodu https://github.com/yazbel/belgeler[GitHub'ta tutulmaktadır].
 
+Bu belgeler şu anda Python 3.6 sürümünü baz alarak yazılmaktadır. Belgeler henüz olgunlaşmadığı için Python bilmiyorsanız önce İstihza sayfasından başlamanızı öneririz!
+[NOTE]
+====
+istihza.com Python 3 belgelerine link:../python-istihza/[şu adres]ten ulaşabilirsiniz.
+Ayrıca bu belgeleri PDF olarak link:../python-istihza.pdf[şu adres]ten indirebilirsiniz.
+====
+
 === Nasıl yardım alabilirim?
 
 Her zaman https://forum.yazbel.com/[YazBel forumu]nun https://forum.yazbel.com/c/python[Python kategorisi]nde bir konu açarak aklınızdaki soruları sorabilirsiniz.
@@ -83,8 +90,8 @@ Python'ın farklı işletim sistemlerinde farklı kurulumları vardır:
 +
 [source,bash]
 ----
-> py -3
-Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)] on win32
+> py
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [MSC v.1900 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ----
@@ -100,7 +107,7 @@ Verdiğimiz komut sonrası __Python etkileşimli kabuğu__nun açılması ve `>>
 [source,bash]
 ----
 $ python3
-Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:54:40) [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ----
@@ -115,7 +122,7 @@ Eğer Linux kullanıyorsanız o zaman Python sizde zaten kuruludur, herhangi bir
 === F-string
 %-biçimlendirme ve `format()` metodu ile biçimlendirme yerine *Python 3.6* bize 3. bir biçimlendirme mekaniği sunuyor.
 
-Bunun adı "Literal String Interpolation" yani "Karakter Dizisi Aradeğerlemesi" demektir (link:https://www.python.org/dev/peps/pep-0498/[PEP-498]). Bu mekaniği kullanan dizilere "Biçimlendirilmiş Karakter Dizisi" anlanımna gelen *"f-string"(formatted-string)* adı veriliyor.
+Bunun adı "Literal String Interpolation" yani "Karakter Dizisi Aradeğerlemesi" demektir (https://www.python.org/dev/peps/pep-0498/[PEP-498]). Bu mekaniği kullanan dizilere "Biçimlendirilmiş Karakter Dizisi" anlanımna gelen *"f-string"(formatted-string)* adı veriliyor.
 
 Bu yeni mekanik önceki metotların yerini almak ya da onları eskitmektense, onların dezavantajlarına bir alternatif olma amacıyla kurulmuş.
 
@@ -138,9 +145,9 @@ Gördüğünüz gibi diziler `f"dizi"` şeklinde başında "f" olacak şekilde y
 metodu kaldırılmış, bu durumda değişkenlerimizi direkt olarak parantezlerin içine yazıyoruz, nasıl gösterilceklerini de(biçimlendirme ayarı) her zamanki gibi iki noktanın ":" önüne yazıyoruz.
 
 [NOTE]
-Bu örnekteki `%A %B %d %Y` biçimlendiricileri `datetime` link:https://belgeler.yazbel.com/python-istihza/standart_moduller/datetime.html#strftime[modülü] için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
+Bu örnekteki `%A %B %d %Y` biçimlendiricileri `datetime` link:../python-istihza/standart_moduller/datetime.html#strftime[modülü] için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
 
-=== Neden f-string
+=== Neden f-string?
 
 %-biçimlendirmenin dezavantajı sadece sayılar ve dizileri desteklemesidir, diğer veri tipleri ya desteklenmiyor ya da biçimlendirmeden önce desteklenen tiplere çeviriliyor. Diğer bilinen sorunu ise sadece tek değer taşıyor olması, örnekte de görüceğiniz gibi demetlerin tüm değerleri diziye yerleştirilmiyor:
 [source,python]
@@ -162,36 +169,154 @@ Fakat f-string ile:
 [source,python]
 ----
 >>> ad = "YazBel"
->>> yıl = 2018
+>>> yil = 2018
 >>> ay = "Şubat"
->>> gün = 12
->>> "Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".format(ad=ad, ay=ay, yıl=yıl, gün=gün)
+>>> gun = 12
+>>> "Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}'sinde yazıldı".format(ad=ad, ay=ay, yil=yil, gun=gun)
 "Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"
 ----
 Fakat f-string ile:
 [source, python]
 ----
->>> f"Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".
+>>> f"Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}'sinde yazıldı".
 "Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"
 ----
 
-Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine her türlü python kodu yazabilirsiniz.
+Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine karakter dizisine çevirilebilen her türlü python kodu yazabilirsiniz.
 
 === Örnekler
 [source,python]
 ----
->>> genişlik = 10
+>>> genislik = 10
 >>> hassasiyet = 4
->>> value = decimal.Decimal("12.34567")
->>> f"result: {value:{genişlik}.{hassasiyet}}"
+>>> deger = decimal.Decimal("12.34567")
+>>> f"result: {deger:{genislik}.{hassasiyet}}" # Parantezler içerisine başka parantezler de yuvanalabilir
 'result:      12.35'
 >>> tarih = datetime(year=2017, month=1, day=27)
 >>> f"{tarih:%B %d, %Y}"
 'January 27, 2017'
->>> number = 1024
->>> f"{number:#0x}"  # Hexadecimal değere çevirme
-'0x400'
+>>> sayi = 1024
+>>> f"{sayi:#0x} ve {sayi:x}" # 16'lı sayma sistemi, x küçük ya da büyük farketmez
+'0x400 ve 400'
+>>> f"{sayi:#0b} ve {sayi:b}" # 2'li sayma sistemi
+'0b10000000000 ve 10000000000'
+>>> f"{sayi:#0o} ve {sayi:o}" # 8'li sayma sistemi
+'0o2000 ve 2000'
 ----
+Daha fazlası için link:../python-istihza/karakter_dizilerini_bicimlendirmek.html[İstihza] sayfasına bakınız
+
+== Tip Belirtimi Sözdizimi
+
+=== Tip Belirtimi/Notu
+https://www.python.org/dev/peps/pep-0498/[PEP-484] ile gelen fonksiyon parametrelerinin verilerinin "tip belirtimi", diğer adıyla "tip notu" sözdizimi kurallarına ek olarak https://www.python.org/dev/peps/pep-0526/[PEP-526] ise bu sefer değişkenlerin veri tipi belirtimi için sözdizimi kuralı eklemektedir. Buna nesne değişkenleri de dahil.
+Değişkenlerin/parametrelerinin veri tipi `:` ile belirtilir, fonksiyounu döndürdüğü veri tipi ise `->` ile belirtilir. Örnek:
+
+[source,python]
+----
+from typing import List, Dict
+
+#PEP-526
+murettebat: List[str] = []
+
+class YildizGemisi:
+    durum: bool
+    ozellikler: Dict[str, int] = {"hız": 15} #PEP-526
+
+    def ozellik(self, ad: str) -> int: #PEP-484
+        return YildizGemisi.ozellikler[ad]
+
+----
+Bu kodda `mürettebat` karakter dizileri içeren bir listedir, `YıldızGemisi` nesnesinin `özellikler` adındaki niteliiği ise `karakter dizisi: tam sayı` çiftlerinden oluşan bir sözlüktür, `durum` niteliği ise bool değeri taşımaktadır fakat henüz bir değer verilmemiş. Nesnenin `özellik` fonksiyonunun `ad` parametresi karakter dizisidir ve fonksiyon tam sayı değeri döndürür. Tip belirtimleri Python yorumlayıcısı tarafından nesnenin ya da modülün(kodun) özel niteliği olan `\\__annotations__`  içerisinde depolar.
+
+Bir örnek daha:
+
+[source,python]
+----
+>>> kaptan # Değişken değeri atanmamışsa ona erişmeye çalışınca Python "NameError" hatası verir
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'kaptan' is not defined
+>>> kaptan: str # Değişken değeri olmadan sadece tipi tanımlanmış bu durumda hata olmaz(tip belirtimi sayesinde), erişmeye çalışırsak hata olur
+>>>kaptan
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'kaptan' is not defined
+>>> kaptan = 15 # İlk değer şimdi verildi üstelik farklı veri tipi ile buna rağmen hata yok, Python hala dinamik tipli
+>>>kaptan # şimdi değişken değerine erişebiliriz
+15
+----
+
+Kodu incelediğnizde değişkenlerin/fonksiyonların tiplerinin  Java/C-C++ gibi statik tipli dillerdeki gibi belirtildiğini görebilirsiniz. Ancak buna rağmen  Python'ın dinamik tip özelliği hala korunmaktadır.
+
+Yani statik tipli dillerin aksine bir Python değişkeni tip notu ile karakter dizisi olarak nitelendirilmişse bile hala farklı tipte bir değeri alabilir.
+
+=== Neden Tip Belirtimi?
+Bu sözdizimi yapısal tip metaverisi sağlama ve kod dokümantasyonu amacı taşımaktar, statik tipli dillerdeki gibi bir kullanım sunmamaktadır. Bu gibi özellikler verilerinizin ne olduğunu size hatırlatmanın yanı sıra 3. parti araçları ya da lint'ler(kod inceleme araçları, https://www.pylint.org/[Pylint], http://www.mypy-lang.org/[mypy] vs.) ve kullanıcılara dokümantasyon sağlama içindir.
+
+https://www.jetbrains.com/pycharm[PyCharm] gibi geliştirme ortamları(IDE) `ctrl+Q` vb. kısayollarla metin imlecinin üzerinde bulunduğu fonksiyonların kod dokümantasyonuna erişerek bunları size gösterir bu sayede fonksiyonun nasıl çalıştığını, hangi tip verilerle iş yaptığını internette araştırmanıza gerek kalmaz (eğer kaynak kod bu gibi dokümantasyonlar içeriyorsa).
+
+=== Örnekler
+[source,python]
+----
+# Uygun Olmayan Kullanımlar
+def f():
+    global x: int  # SyntaxError
+
+def g():
+    x: int  # SyntaxError
+    global x
+
+a: int
+for a in my_iter:
+    ...
+
+f: MyFile
+with myfunc() as f:
+    ...
+# Uygun Olan Kullanımlar
+class Cls:
+    pass
+
+c = Cls()
+c.x: int = 0
+c.y: int
+
+d = {}
+d['a']: int = 0
+d['b']: int
+----
+
+== Sayılarda Altçizgi Kullanımı
+https://www.python.org/dev/peps/pep-0515[PEP-515] ile sayıların içersinde altçizgi kullanarak kod okunabilirliğini arttırabiliriz. Altçizgilerin semantik bir anlamı yoktur, bu yüzden sayılar yorumlayıcı tarafından altçizgi yokmuş gibi algılanırlar.Bu sayede biz de sayıların anlamını değiştirmeden kolayca okuyabiliriz. Örnek:
+[source,python]
+----
+>>> 1000000000000000 # Altçizgi yok
+1000000000000000
+>>> 1_000_000_000_000_000 # Altçizgi var ama sayı yine aynı sayı
+1000000000000000
+>>> 10_000_000.000_2
+10000000.0002
+>>> 0x_FF_FF_FF_FF
+4294967295
+>>> 0b_0011_1111
+63
+>>> int("0b_1111_0000",2)
+240
+>>>
+----
+Rakamlar arasında ya da taban göstergesinden(0x,0b vs.) sonra bir adet altçizgi kullanılabilir. Aralarda birden fazla veya sayıların başında ve sonunda alt çizgi kullanımına izin verilmiyor.
+
+Karakter dizisi link:#_karakter_dizisi_bi%C3%A7imlendirme[biçimlendirmede] de altçizgi kullanımı mümkündür:
+[source,python]
+----
+>>> f"{1000000000:_}"
+'1_000_000_000'
+>>> f"{0xFFFFFFFF:_}"
+'4_294_967_295'
+>>> f"{0xFFFFFFFF:_x}"
+'ffff_ffff'
+----
+
 
 == Beautiful Soup Belgeleri
 
