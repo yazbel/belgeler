@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .listingblock .pygments .hll { background-color: #ffffcc }
 .listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
 .listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+/*.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
 .listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
 .listingblock .pygments .tok-o { color: #666666 } /* Operator */
 .listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
@@ -689,6 +689,19 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windows&#8217;ta Python 3.6+ yüklü ise terminale <code>py</code> yada <code>python</code> yazmanız yeterlidir.<br>
+Python 2 için ise <code>py -2</code> yazmanız gerekir.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_mac_te_kurulum">Mac&#8217;te Kurulum</h3>
@@ -804,10 +817,10 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">yil</span> <span class="tok-o">=</span> <span class="tok-mi">2018</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span> <span class="tok-o">=</span> <span class="tok-mi">2018</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ay</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Şubat&quot;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">gun</span> <span class="tok-o">=</span> <span class="tok-mi">12</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span><span class="tok-n">format</span><span class="tok-p">(</span><span class="tok-n">ad</span><span class="tok-o">=</span><span class="tok-n">ad</span><span class="tok-p">,</span> <span class="tok-n">ay</span><span class="tok-o">=</span><span class="tok-n">ay</span><span class="tok-p">,</span> <span class="tok-n">yil</span><span class="tok-o">=</span><span class="tok-n">yil</span><span class="tok-p">,</span> <span class="tok-n">gun</span><span class="tok-o">=</span><span class="tok-n">gun</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span><span class="tok-n">format</span><span class="tok-p">(</span><span class="tok-n">ad</span><span class="tok-o">=</span><span class="tok-n">ad</span><span class="tok-p">,</span> <span class="tok-n">ay</span><span class="tok-o">=</span><span class="tok-n">ay</span><span class="tok-p">,</span> <span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span><span class="tok-o">=</span><span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span><span class="tok-p">,</span> <span class="tok-n">g</span><span class="tok-err">ü</span><span class="tok-n">n</span><span class="tok-o">=</span><span class="tok-n">g</span><span class="tok-err">ü</span><span class="tok-n">n</span><span class="tok-p">)</span>
 <span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
 </div>
 </div>
@@ -816,7 +829,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span>
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span>
 <span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
 </div>
 </div>
@@ -828,20 +841,20 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 <h3 id="_örnekler">Örnekler</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">genislik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">geni</span><span class="tok-err">ş</span><span class="tok-n">lik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">hassasiyet</span> <span class="tok-o">=</span> <span class="tok-mi">4</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">deger</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {deger:{genislik}.{hassasiyet}}&quot;</span> <span class="tok-c1"># Parantezler içerisine başka parantezler de yuvanalabilir</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">de</span><span class="tok-err">ğ</span><span class="tok-n">er</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {değer:{genişlik}.{hassasiyet}}&quot;</span> <span class="tok-c1"># Parantezler içerisine başka parantezler de yuvanalabilir</span>
 <span class="tok-s1">&#39;result:      12.35&#39;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">tarih</span> <span class="tok-o">=</span> <span class="tok-n">datetime</span><span class="tok-p">(</span><span class="tok-n">year</span><span class="tok-o">=</span><span class="tok-mi">2017</span><span class="tok-p">,</span> <span class="tok-n">month</span><span class="tok-o">=</span><span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-n">day</span><span class="tok-o">=</span><span class="tok-mi">27</span><span class="tok-p">)</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{tarih:%B </span><span class="tok-si">%d</span><span class="tok-s2">, %Y}&quot;</span>
 <span class="tok-s1">&#39;January 27, 2017&#39;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">sayi</span> <span class="tok-o">=</span> <span class="tok-mi">1024</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayi:#0x} ve {sayi:x}&quot;</span> <span class="tok-c1"># 16&#39;lı sayma sistemi, x küçük ya da büyük farketmez</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">say</span><span class="tok-err">ı</span> <span class="tok-o">=</span> <span class="tok-mi">1024</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0x} ve {sayı:x}&quot;</span> <span class="tok-c1"># 16&#39;lı sayma sistemi, x küçük ya da büyük farketmez</span>
 <span class="tok-s1">&#39;0x400 ve 400&#39;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayi:#0b} ve {sayi:b}&quot;</span> <span class="tok-c1"># 2&#39;li sayma sistemi</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0b} ve {sayı:b}&quot;</span> <span class="tok-c1"># 2&#39;li sayma sistemi</span>
 <span class="tok-s1">&#39;0b10000000000 ve 10000000000&#39;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayi:#0o} ve {sayi:o}&quot;</span> <span class="tok-c1"># 8&#39;li sayma sistemi</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0o} ve {sayı:o}&quot;</span> <span class="tok-c1"># 8&#39;li sayma sistemi</span>
 <span class="tok-s1">&#39;0o2000 ve 2000&#39;</span></code></pre>
 </div>
 </div>
@@ -865,14 +878,14 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 <pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-kn">from</span> <span class="tok-nn">typing</span> <span class="tok-kn">import</span> <span class="tok-n">List</span><span class="tok-p">,</span> <span class="tok-n">Dict</span>
 
 <span class="tok-c1">#PEP-526</span>
-<span class="tok-n">murettebat</span><span class="tok-p">:</span> <span class="tok-n">List</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">[]</span>
+<span class="tok-n">m</span><span class="tok-err">ü</span><span class="tok-n">rettebat</span><span class="tok-p">:</span> <span class="tok-n">List</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">[]</span>
 
-<span class="tok-k">class</span> <span class="tok-nc">YildizGemisi</span><span class="tok-p">:</span>
+<span class="tok-k">class</span> <span class="tok-nc">Y</span><span class="tok-err">ı</span><span class="tok-n">ld</span><span class="tok-err">ı</span><span class="tok-n">zGemisi</span><span class="tok-p">:</span>
     <span class="tok-n">durum</span><span class="tok-p">:</span> <span class="tok-nb">bool</span>
-    <span class="tok-n">ozellikler</span><span class="tok-p">:</span> <span class="tok-n">Dict</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">,</span> <span class="tok-nb">int</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">{</span><span class="tok-s2">&quot;hız&quot;</span><span class="tok-p">:</span> <span class="tok-mi">15</span><span class="tok-p">}</span> <span class="tok-c1">#PEP-526</span>
+    <span class="tok-err">ö</span><span class="tok-n">zellikler</span><span class="tok-p">:</span> <span class="tok-n">Dict</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">,</span> <span class="tok-nb">int</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">{</span><span class="tok-s2">&quot;hız&quot;</span><span class="tok-p">:</span> <span class="tok-mi">15</span><span class="tok-p">}</span> <span class="tok-c1">#PEP-526</span>
 
-    <span class="tok-k">def</span> <span class="tok-nf">ozellik</span><span class="tok-p">(</span><span class="tok-bp">self</span><span class="tok-p">,</span> <span class="tok-n">ad</span><span class="tok-p">:</span> <span class="tok-nb">str</span><span class="tok-p">)</span> <span class="tok-o">-&gt;</span> <span class="tok-nb">int</span><span class="tok-p">:</span> <span class="tok-c1">#PEP-484</span>
-        <span class="tok-k">return</span> <span class="tok-n">YildizGemisi</span><span class="tok-o">.</span><span class="tok-n">ozellikler</span><span class="tok-p">[</span><span class="tok-n">ad</span><span class="tok-p">]</span></code></pre>
+    <span class="tok-k">def</span> <span class="tok-err">ö</span><span class="tok-n">zellik</span><span class="tok-p">(</span><span class="tok-bp">self</span><span class="tok-p">,</span> <span class="tok-n">ad</span><span class="tok-p">:</span> <span class="tok-nb">str</span><span class="tok-p">)</span> <span class="tok-o">-&gt;</span> <span class="tok-nb">int</span><span class="tok-p">:</span> <span class="tok-c1">#PEP-484</span>
+        <span class="tok-k">return</span> <span class="tok-n">Y</span><span class="tok-err">ı</span><span class="tok-n">ld</span><span class="tok-err">ı</span><span class="tok-n">zGemisi</span><span class="tok-o">.</span><span class="tok-err">ö</span><span class="tok-n">zellikler</span><span class="tok-p">[</span><span class="tok-n">ad</span><span class="tok-p">]</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -967,8 +980,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">0</span><span class="tok-n">b_0011_1111</span>
 <span class="tok-mi">63</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-nb">int</span><span class="tok-p">(</span><span class="tok-s2">&quot;0b_1111_0000&quot;</span><span class="tok-p">,</span><span class="tok-mi">2</span><span class="tok-p">)</span>
-<span class="tok-mi">240</span>
-<span class="tok-o">&gt;&gt;&gt;</span></code></pre>
+<span class="tok-mi">240</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1002,7 +1014,7 @@ Belgeler için <a href="beautiful-soup/">tıklayın</a>.</p>
 <div id="footer">
 <div id="footer-text">
 Sürüm 0.1<br>
-Son güncelleme 2018-02-20 15:39:42 Turkey Standard Time
+Son güncelleme 2018-02-22 19:52:47 Turkey Standard Time
 </div>
 </div>
 </body>

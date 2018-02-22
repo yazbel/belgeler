@@ -98,6 +98,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 +
 Verdiğimiz komut sonrası __Python etkileşimli kabuğu__nun açılması ve `>>>` işaretinden sonra bizden komut beklenmesi, kurulumumuzun başarılı olduğunu gösteriyor.
 
+[NOTE]
+Windows'ta Python 3.6+ yüklü ise terminale `py` yada `python` yazmanız yeterlidir. +
+Python 2 için ise `py -2` yazmanız gerekir.
+
 === Mac'te Kurulum
 
 - https://www.python.org/downloads/[Python indirmeler sayfası]ndan *Download Python 3.x.x* tuşuna tıklayın ve kurucu programın indirilmesini bekleyin.
@@ -169,16 +173,16 @@ Fakat f-string ile:
 [source,python]
 ----
 >>> ad = "YazBel"
->>> yil = 2018
+>>> yıl = 2018
 >>> ay = "Şubat"
 >>> gun = 12
->>> "Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}'sinde yazıldı".format(ad=ad, ay=ay, yil=yil, gun=gun)
+>>> "Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".format(ad=ad, ay=ay, yıl=yıl, gün=gün)
 "Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"
 ----
 Fakat f-string ile:
 [source, python]
 ----
->>> f"Bu sitenin adı {ad}, bu yazı {yil} yılının, {ay} ayının {gun}'sinde yazıldı".
+>>> f"Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}'sinde yazıldı".
 "Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12'sinde yazıldı"
 ----
 
@@ -187,20 +191,20 @@ Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine
 === Örnekler
 [source,python]
 ----
->>> genislik = 10
+>>> genişlik = 10
 >>> hassasiyet = 4
->>> deger = decimal.Decimal("12.34567")
->>> f"result: {deger:{genislik}.{hassasiyet}}" # Parantezler içerisine başka parantezler de yuvanalabilir
+>>> değer = decimal.Decimal("12.34567")
+>>> f"result: {değer:{genişlik}.{hassasiyet}}" # Parantezler içerisine başka parantezler de yuvanalabilir
 'result:      12.35'
 >>> tarih = datetime(year=2017, month=1, day=27)
 >>> f"{tarih:%B %d, %Y}"
 'January 27, 2017'
->>> sayi = 1024
->>> f"{sayi:#0x} ve {sayi:x}" # 16'lı sayma sistemi, x küçük ya da büyük farketmez
+>>> sayı = 1024
+>>> f"{sayı:#0x} ve {sayı:x}" # 16'lı sayma sistemi, x küçük ya da büyük farketmez
 '0x400 ve 400'
->>> f"{sayi:#0b} ve {sayi:b}" # 2'li sayma sistemi
+>>> f"{sayı:#0b} ve {sayı:b}" # 2'li sayma sistemi
 '0b10000000000 ve 10000000000'
->>> f"{sayi:#0o} ve {sayi:o}" # 8'li sayma sistemi
+>>> f"{sayı:#0o} ve {sayı:o}" # 8'li sayma sistemi
 '0o2000 ve 2000'
 ----
 Daha fazlası için link:../python-istihza/karakter_dizilerini_bicimlendirmek.html[İstihza] sayfasına bakınız
@@ -216,15 +220,14 @@ Değişkenlerin/parametrelerinin veri tipi `:` ile belirtilir, fonksiyounu dönd
 from typing import List, Dict
 
 #PEP-526
-murettebat: List[str] = []
+mürettebat: List[str] = []
 
-class YildizGemisi:
+class YıldızGemisi:
     durum: bool
-    ozellikler: Dict[str, int] = {"hız": 15} #PEP-526
+    özellikler: Dict[str, int] = {"hız": 15} #PEP-526
 
-    def ozellik(self, ad: str) -> int: #PEP-484
-        return YildizGemisi.ozellikler[ad]
-
+    def özellik(self, ad: str) -> int: #PEP-484
+        return YıldızGemisi.özellikler[ad]
 ----
 Bu kodda `mürettebat` karakter dizileri içeren bir listedir, `YıldızGemisi` nesnesinin `özellikler` adındaki niteliiği ise `karakter dizisi: tam sayı` çiftlerinden oluşan bir sözlüktür, `durum` niteliği ise bool değeri taşımaktadır fakat henüz bir değer verilmemiş. Nesnenin `özellik` fonksiyonunun `ad` parametresi karakter dizisidir ve fonksiyon tam sayı değeri döndürür. Tip belirtimleri Python yorumlayıcısı tarafından nesnenin ya da modülün(kodun) özel niteliği olan `\\__annotations__`  içerisinde depolar.
 
@@ -302,7 +305,6 @@ https://www.python.org/dev/peps/pep-0515[PEP-515] ile sayıların içersinde alt
 63
 >>> int("0b_1111_0000",2)
 240
->>>
 ----
 Rakamlar arasında ya da taban göstergesinden(0x,0b vs.) sonra bir adet altçizgi kullanılabilir. Aralarda birden fazla veya sayıların başında ve sonunda alt çizgi kullanımına izin verilmiyor.
 
