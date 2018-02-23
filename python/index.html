@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .listingblock .pygments .hll { background-color: #ffffcc }
 .listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
 .listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+/*.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
 .listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
 .listingblock .pygments .tok-o { color: #666666 } /* Operator */
 .listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
@@ -527,10 +527,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_karakter_dizisi_biçimlendirme">Karakter Dizisi Biçimlendirme</a>
 <ul class="sectlevel2">
 <li><a href="#_f_string">F-string</a></li>
-<li><a href="#_neden_f_string">Neden f-string</a></li>
+<li><a href="#_neden_f_string">Neden f-string?</a></li>
 <li><a href="#_örnekler">Örnekler</a></li>
 </ul>
 </li>
+<li><a href="#_tip_belirtimi_sözdizimi">Tip Belirtimi Sözdizimi</a>
+<ul class="sectlevel2">
+<li><a href="#_tip_belirtimi_notu">Tip Belirtimi/Notu</a></li>
+<li><a href="#_neden_tip_belirtimi">Neden Tip Belirtimi?</a></li>
+<li><a href="#_örnekler_2">Örnekler</a></li>
+</ul>
+</li>
+<li><a href="#_sayılarda_altçizgi_kullanımı">Sayılarda Altçizgi Kullanımı</a></li>
 <li><a href="#_beautiful_soup_belgeleri">Beautiful Soup Belgeleri</a></li>
 </ul>
 </div>
@@ -565,6 +573,24 @@ Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Bu belgelerin kaynak kodu <a href="https://github.com/yazbel/belgeler">GitHub&#8217;ta tutulmaktadır</a>.</p>
+</div>
+<div class="paragraph">
+<p>Bu belgeler şu anda Python 3.6 sürümünü baz alarak yazılmaktadır. Belgeler henüz olgunlaşmadığı için Python bilmiyorsanız önce İstihza sayfasından başlamanızı öneririz!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>istihza.com Python 3 belgelerine <a href="../python-istihza/">şu adres</a>ten ulaşabilirsiniz.
+Ayrıca bu belgeleri PDF olarak <a href="../python-istihza.pdf">şu adres</a>ten indirebilirsiniz.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_nasıl_yardım_alabilirim">Nasıl yardım alabilirim?</h3>
@@ -651,8 +677,8 @@ Python ile ilk uygulamanızı geliştirdiğinizde ve sonucunu ekranda gördüğ�
 <p>Komut İstemi&#8217;nde şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash"><span></span>&gt; py -3
-Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>MSC v.1900 <span class="tok-m">32</span> bit <span class="tok-o">(</span>Intel<span class="tok-o">)]</span> on win32
+<pre class="pygments highlight"><code data-lang="bash"><span></span>&gt; py
+Python <span class="tok-m">3</span>.6.4 <span class="tok-o">(</span>v3.6.4:d48eceb, Dec <span class="tok-m">19</span> <span class="tok-m">2017</span>, <span class="tok-m">06</span>:54:40<span class="tok-o">)</span> <span class="tok-o">[</span>MSC v.1900 <span class="tok-m">32</span> bit <span class="tok-o">(</span>Intel<span class="tok-o">)]</span> on win32
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
 </div>
@@ -662,6 +688,19 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 </div>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Windows&#8217;ta Python 3.6+ yüklü ise terminale <code>py</code> yada <code>python</code> yazmanız yeterlidir.<br>
+Python 2 için ise <code>py -2</code> yazmanız gerekir.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -679,7 +718,7 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="bash"><span></span>$ python3
-Python <span class="tok-m">3</span>.6.1 <span class="tok-o">(</span>v3.6.1:69c0db5, Mar <span class="tok-m">21</span> <span class="tok-m">2017</span>, <span class="tok-m">17</span>:54:52<span class="tok-o">)</span> <span class="tok-o">[</span>GCC <span class="tok-m">4</span>.2.1 <span class="tok-o">(</span>Apple Inc. build <span class="tok-m">5666</span><span class="tok-o">)</span> <span class="tok-o">(</span>dot <span class="tok-m">3</span><span class="tok-o">)]</span> on darwin
+Python <span class="tok-m">3</span>.6.4 <span class="tok-o">(</span>v3.6.4:d48eceb, Dec <span class="tok-m">19</span> <span class="tok-m">2017</span>, <span class="tok-m">06</span>:54:40<span class="tok-o">)</span> <span class="tok-o">[</span>GCC <span class="tok-m">4</span>.2.1 <span class="tok-o">(</span>Apple Inc. build <span class="tok-m">5666</span><span class="tok-o">)</span> <span class="tok-o">(</span>dot <span class="tok-m">3</span><span class="tok-o">)]</span> on darwin
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
 </div>
@@ -743,14 +782,14 @@ metodu kaldırılmış, bu durumda değişkenlerimizi direkt olarak parantezleri
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code> <a href="https://belgeler.yazbel.com/python-istihza/standart_moduller/datetime.html#strftime">modülü</a> için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
+Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code> <a href="../python-istihza/standart_moduller/datetime.html#strftime">modülü</a> için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_neden_f_string">Neden f-string</h3>
+<h3 id="_neden_f_string">Neden f-string?</h3>
 <div class="paragraph">
 <p>%-biçimlendirmenin dezavantajı sadece sayılar ve dizileri desteklemesidir, diğer veri tipleri ya desteklenmiyor ya da biçimlendirmeden önce desteklenen tiplere çeviriliyor. Diğer bilinen sorunu ise sadece tek değer taşıyor olması, örnekte de görüceğiniz gibi demetlerin tüm değerleri diziye yerleştirilmiyor:</p>
 </div>
@@ -778,10 +817,10 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">yıl</span><span class="tok-o">=</span> <span class="tok-mi">2018</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span> <span class="tok-o">=</span> <span class="tok-mi">2018</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ay</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Şubat&quot;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">gün</span><span class="tok-o">=</span> <span class="tok-mi">12</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span><span class="tok-n">format</span><span class="tok-p">(</span><span class="tok-n">ad</span><span class="tok-o">=</span><span class="tok-n">ad</span><span class="tok-p">,</span> <span class="tok-n">ay</span><span class="tok-o">=</span><span class="tok-n">ay</span><span class="tok-p">,</span> <span class="tok-n">yıl</span><span class="tok-o">=</span><span class="tok-n">yıl</span><span class="tok-p">,</span> <span class="tok-n">gün</span><span class="tok-o">=</span><span class="tok-n">gün</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">gun</span> <span class="tok-o">=</span> <span class="tok-mi">12</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span><span class="tok-n">format</span><span class="tok-p">(</span><span class="tok-n">ad</span><span class="tok-o">=</span><span class="tok-n">ad</span><span class="tok-p">,</span> <span class="tok-n">ay</span><span class="tok-o">=</span><span class="tok-n">ay</span><span class="tok-p">,</span> <span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span><span class="tok-o">=</span><span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span><span class="tok-p">,</span> <span class="tok-n">g</span><span class="tok-err">ü</span><span class="tok-n">n</span><span class="tok-o">=</span><span class="tok-n">g</span><span class="tok-err">ü</span><span class="tok-n">n</span><span class="tok-p">)</span>
 <span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
 </div>
 </div>
@@ -795,25 +834,169 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 </div>
 <div class="paragraph">
-<p>Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine her türlü python kodu yazabilirsiniz.</p>
+<p>Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine sabit değer değilde çalışırken(run-time) ele alınan python kodlarıdır, yani parantezler içerisine karakter dizisine çevirilebilen her türlü python kodu yazabilirsiniz.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_örnekler">Örnekler</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">genişlik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">geni</span><span class="tok-err">ş</span><span class="tok-n">lik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">hassasiyet</span> <span class="tok-o">=</span> <span class="tok-mi">4</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">value</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {value:{genişlik}.{hassasiyet}}&quot;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">de</span><span class="tok-err">ğ</span><span class="tok-n">er</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {değer:{genişlik}.{hassasiyet}}&quot;</span> <span class="tok-c1"># Parantezler içerisine başka parantezler de yuvanalabilir</span>
 <span class="tok-s1">&#39;result:      12.35&#39;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">tarih</span> <span class="tok-o">=</span> <span class="tok-n">datetime</span><span class="tok-p">(</span><span class="tok-n">year</span><span class="tok-o">=</span><span class="tok-mi">2017</span><span class="tok-p">,</span> <span class="tok-n">month</span><span class="tok-o">=</span><span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-n">day</span><span class="tok-o">=</span><span class="tok-mi">27</span><span class="tok-p">)</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{tarih:%B </span><span class="tok-si">%d</span><span class="tok-s2">, %Y}&quot;</span>
 <span class="tok-s1">&#39;January 27, 2017&#39;</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">number</span> <span class="tok-o">=</span> <span class="tok-mi">1024</span>
-<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{number:#0x}&quot;</span>  <span class="tok-c1"># Hexadecimal değere çevirme</span>
-<span class="tok-s1">&#39;0x400&#39;</span></code></pre>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">say</span><span class="tok-err">ı</span> <span class="tok-o">=</span> <span class="tok-mi">1024</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0x} ve {sayı:x}&quot;</span> <span class="tok-c1"># 16&#39;lı sayma sistemi, x küçük ya da büyük farketmez</span>
+<span class="tok-s1">&#39;0x400 ve 400&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0b} ve {sayı:b}&quot;</span> <span class="tok-c1"># 2&#39;li sayma sistemi</span>
+<span class="tok-s1">&#39;0b10000000000 ve 10000000000&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{sayı:#0o} ve {sayı:o}&quot;</span> <span class="tok-c1"># 8&#39;li sayma sistemi</span>
+<span class="tok-s1">&#39;0o2000 ve 2000&#39;</span></code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Daha fazlası için <a href="../python-istihza/karakter_dizilerini_bicimlendirmek.html">İstihza</a> sayfasına bakınız</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tip_belirtimi_sözdizimi">Tip Belirtimi Sözdizimi</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tip_belirtimi_notu">Tip Belirtimi/Notu</h3>
+<div class="paragraph">
+<p><a href="https://www.python.org/dev/peps/pep-0498/">PEP-484</a> ile gelen fonksiyon parametrelerinin verilerinin "tip belirtimi", diğer adıyla "tip notu" sözdizimi kurallarına ek olarak <a href="https://www.python.org/dev/peps/pep-0526/">PEP-526</a> ise bu sefer değişkenlerin veri tipi belirtimi için sözdizimi kuralı eklemektedir. Buna nesne değişkenleri de dahil.
+Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksiyounu döndürdüğü veri tipi ise <code>&#8594;</code> ile belirtilir. Örnek:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-kn">from</span> <span class="tok-nn">typing</span> <span class="tok-kn">import</span> <span class="tok-n">List</span><span class="tok-p">,</span> <span class="tok-n">Dict</span>
+
+<span class="tok-c1">#PEP-526</span>
+<span class="tok-n">m</span><span class="tok-err">ü</span><span class="tok-n">rettebat</span><span class="tok-p">:</span> <span class="tok-n">List</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">[]</span>
+
+<span class="tok-k">class</span> <span class="tok-nc">Y</span><span class="tok-err">ı</span><span class="tok-n">ld</span><span class="tok-err">ı</span><span class="tok-n">zGemisi</span><span class="tok-p">:</span>
+    <span class="tok-n">durum</span><span class="tok-p">:</span> <span class="tok-nb">bool</span>
+    <span class="tok-err">ö</span><span class="tok-n">zellikler</span><span class="tok-p">:</span> <span class="tok-n">Dict</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">,</span> <span class="tok-nb">int</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">{</span><span class="tok-s2">&quot;hız&quot;</span><span class="tok-p">:</span> <span class="tok-mi">15</span><span class="tok-p">}</span> <span class="tok-c1">#PEP-526</span>
+
+    <span class="tok-k">def</span> <span class="tok-err">ö</span><span class="tok-n">zellik</span><span class="tok-p">(</span><span class="tok-bp">self</span><span class="tok-p">,</span> <span class="tok-n">ad</span><span class="tok-p">:</span> <span class="tok-nb">str</span><span class="tok-p">)</span> <span class="tok-o">-&gt;</span> <span class="tok-nb">int</span><span class="tok-p">:</span> <span class="tok-c1">#PEP-484</span>
+        <span class="tok-k">return</span> <span class="tok-n">Y</span><span class="tok-err">ı</span><span class="tok-n">ld</span><span class="tok-err">ı</span><span class="tok-n">zGemisi</span><span class="tok-o">.</span><span class="tok-err">ö</span><span class="tok-n">zellikler</span><span class="tok-p">[</span><span class="tok-n">ad</span><span class="tok-p">]</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Bu kodda <code>mürettebat</code> karakter dizileri içeren bir listedir, <code>YıldızGemisi</code> nesnesinin <code>özellikler</code> adındaki niteliiği ise <code>karakter dizisi: tam sayı</code> çiftlerinden oluşan bir sözlüktür, <code>durum</code> niteliği ise bool değeri taşımaktadır fakat henüz bir değer verilmemiş. Nesnenin <code>özellik</code> fonksiyonunun <code>ad</code> parametresi karakter dizisidir ve fonksiyon tam sayı değeri döndürür. Tip belirtimleri Python yorumlayıcısı tarafından nesnenin ya da modülün(kodun) özel niteliği olan <code>__annotations__</code>  içerisinde depolar.</p>
+</div>
+<div class="paragraph">
+<p>Bir örnek daha:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">kaptan</span> <span class="tok-c1"># Değişken değeri atanmamışsa ona erişmeye çalışınca Python &quot;NameError&quot; hatası verir</span>
+<span class="tok-n">Traceback</span> <span class="tok-p">(</span><span class="tok-n">most</span> <span class="tok-n">recent</span> <span class="tok-n">call</span> <span class="tok-n">last</span><span class="tok-p">):</span>
+  <span class="tok-n">File</span> <span class="tok-s2">&quot;&lt;stdin&gt;&quot;</span><span class="tok-p">,</span> <span class="tok-n">line</span> <span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-ow">in</span> <span class="tok-o">&lt;</span><span class="tok-n">module</span><span class="tok-o">&gt;</span>
+<span class="tok-ne">NameError</span><span class="tok-p">:</span> <span class="tok-n">name</span> <span class="tok-s1">&#39;kaptan&#39;</span> <span class="tok-ow">is</span> <span class="tok-ow">not</span> <span class="tok-n">defined</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">kaptan</span><span class="tok-p">:</span> <span class="tok-nb">str</span> <span class="tok-c1"># Değişken değeri olmadan sadece tipi tanımlanmış bu durumda hata olmaz(tip belirtimi sayesinde), erişmeye çalışırsak hata olur</span>
+<span class="tok-o">&gt;&gt;&gt;</span><span class="tok-n">kaptan</span>
+<span class="tok-n">Traceback</span> <span class="tok-p">(</span><span class="tok-n">most</span> <span class="tok-n">recent</span> <span class="tok-n">call</span> <span class="tok-n">last</span><span class="tok-p">):</span>
+  <span class="tok-n">File</span> <span class="tok-s2">&quot;&lt;stdin&gt;&quot;</span><span class="tok-p">,</span> <span class="tok-n">line</span> <span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-ow">in</span> <span class="tok-o">&lt;</span><span class="tok-n">module</span><span class="tok-o">&gt;</span>
+<span class="tok-ne">NameError</span><span class="tok-p">:</span> <span class="tok-n">name</span> <span class="tok-s1">&#39;kaptan&#39;</span> <span class="tok-ow">is</span> <span class="tok-ow">not</span> <span class="tok-n">defined</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">kaptan</span> <span class="tok-o">=</span> <span class="tok-mi">15</span> <span class="tok-c1"># İlk değer şimdi verildi üstelik farklı veri tipi ile buna rağmen hata yok, Python hala dinamik tipli</span>
+<span class="tok-o">&gt;&gt;&gt;</span><span class="tok-n">kaptan</span> <span class="tok-c1"># şimdi değişken değerine erişebiliriz</span>
+<span class="tok-mi">15</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Kodu incelediğnizde değişkenlerin/fonksiyonların tiplerinin  Java/C-C++ gibi statik tipli dillerdeki gibi belirtildiğini görebilirsiniz. Ancak buna rağmen  Python&#8217;ın dinamik tip özelliği hala korunmaktadır.</p>
+</div>
+<div class="paragraph">
+<p>Yani statik tipli dillerin aksine bir Python değişkeni tip notu ile karakter dizisi olarak nitelendirilmişse bile hala farklı tipte bir değeri alabilir.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_neden_tip_belirtimi">Neden Tip Belirtimi?</h3>
+<div class="paragraph">
+<p>Bu sözdizimi yapısal tip metaverisi sağlama ve kod dokümantasyonu amacı taşımaktar, statik tipli dillerdeki gibi bir kullanım sunmamaktadır. Bu gibi özellikler verilerinizin ne olduğunu size hatırlatmanın yanı sıra 3. parti araçları ya da lint&#8217;ler(kod inceleme araçları, <a href="https://www.pylint.org/">Pylint</a>, <a href="http://www.mypy-lang.org/">mypy</a> vs.) ve kullanıcılara dokümantasyon sağlama içindir.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.jetbrains.com/pycharm">PyCharm</a> gibi geliştirme ortamları(IDE) <code>ctrl+Q</code> vb. kısayollarla metin imlecinin üzerinde bulunduğu fonksiyonların kod dokümantasyonuna erişerek bunları size gösterir bu sayede fonksiyonun nasıl çalıştığını, hangi tip verilerle iş yaptığını internette araştırmanıza gerek kalmaz (eğer kaynak kod bu gibi dokümantasyonlar içeriyorsa).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_örnekler_2">Örnekler</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-c1"># Uygun Olmayan Kullanımlar</span>
+<span class="tok-k">def</span> <span class="tok-nf">f</span><span class="tok-p">():</span>
+    <span class="tok-k">global</span> <span class="tok-n">x</span><span class="tok-p">:</span> <span class="tok-nb">int</span>  <span class="tok-c1"># SyntaxError</span>
+
+<span class="tok-k">def</span> <span class="tok-nf">g</span><span class="tok-p">():</span>
+    <span class="tok-n">x</span><span class="tok-p">:</span> <span class="tok-nb">int</span>  <span class="tok-c1"># SyntaxError</span>
+    <span class="tok-k">global</span> <span class="tok-n">x</span>
+
+<span class="tok-n">a</span><span class="tok-p">:</span> <span class="tok-nb">int</span>
+<span class="tok-k">for</span> <span class="tok-n">a</span> <span class="tok-ow">in</span> <span class="tok-n">my_iter</span><span class="tok-p">:</span>
+    <span class="tok-o">...</span>
+
+<span class="tok-n">f</span><span class="tok-p">:</span> <span class="tok-n">MyFile</span>
+<span class="tok-k">with</span> <span class="tok-n">myfunc</span><span class="tok-p">()</span> <span class="tok-k">as</span> <span class="tok-n">f</span><span class="tok-p">:</span>
+    <span class="tok-o">...</span>
+<span class="tok-c1"># Uygun Olan Kullanımlar</span>
+<span class="tok-k">class</span> <span class="tok-nc">Cls</span><span class="tok-p">:</span>
+    <span class="tok-k">pass</span>
+
+<span class="tok-n">c</span> <span class="tok-o">=</span> <span class="tok-n">Cls</span><span class="tok-p">()</span>
+<span class="tok-n">c</span><span class="tok-o">.</span><span class="tok-n">x</span><span class="tok-p">:</span> <span class="tok-nb">int</span> <span class="tok-o">=</span> <span class="tok-mi">0</span>
+<span class="tok-n">c</span><span class="tok-o">.</span><span class="tok-n">y</span><span class="tok-p">:</span> <span class="tok-nb">int</span>
+
+<span class="tok-n">d</span> <span class="tok-o">=</span> <span class="tok-p">{}</span>
+<span class="tok-n">d</span><span class="tok-p">[</span><span class="tok-s1">&#39;a&#39;</span><span class="tok-p">]:</span> <span class="tok-nb">int</span> <span class="tok-o">=</span> <span class="tok-mi">0</span>
+<span class="tok-n">d</span><span class="tok-p">[</span><span class="tok-s1">&#39;b&#39;</span><span class="tok-p">]:</span> <span class="tok-nb">int</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sayılarda_altçizgi_kullanımı">Sayılarda Altçizgi Kullanımı</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.python.org/dev/peps/pep-0515">PEP-515</a> ile sayıların içersinde altçizgi kullanarak kod okunabilirliğini arttırabiliriz. Altçizgilerin semantik bir anlamı yoktur, bu yüzden sayılar yorumlayıcı tarafından altçizgi yokmuş gibi algılanırlar.Bu sayede biz de sayıların anlamını değiştirmeden kolayca okuyabiliriz. Örnek:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">1000000000000000</span> <span class="tok-c1"># Altçizgi yok</span>
+<span class="tok-mi">1000000000000000</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">1</span><span class="tok-n">_000_000_000_000_000</span> <span class="tok-c1"># Altçizgi var ama sayı yine aynı sayı</span>
+<span class="tok-mi">1000000000000000</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">10</span><span class="tok-n">_000_000</span><span class="tok-o">.</span><span class="tok-mo">000</span><span class="tok-n">_2</span>
+<span class="tok-mf">10000000.0002</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">0</span><span class="tok-n">x_FF_FF_FF_FF</span>
+<span class="tok-mi">4294967295</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">0</span><span class="tok-n">b_0011_1111</span>
+<span class="tok-mi">63</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-nb">int</span><span class="tok-p">(</span><span class="tok-s2">&quot;0b_1111_0000&quot;</span><span class="tok-p">,</span><span class="tok-mi">2</span><span class="tok-p">)</span>
+<span class="tok-mi">240</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Rakamlar arasında ya da taban göstergesinden(0x,0b vs.) sonra bir adet altçizgi kullanılabilir. Aralarda birden fazla veya sayıların başında ve sonunda alt çizgi kullanımına izin verilmiyor.</p>
+</div>
+<div class="paragraph">
+<p>Karakter dizisi <a href="#_karakter_dizisi_bi%C3%A7imlendirme">biçimlendirmede</a> de altçizgi kullanımı mümkündür:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{1000000000:_}&quot;</span>
+<span class="tok-s1">&#39;1_000_000_000&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{0xFFFFFFFF:_}&quot;</span>
+<span class="tok-s1">&#39;4_294_967_295&#39;</span>
+<span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{0xFFFFFFFF:_x}&quot;</span>
+<span class="tok-s1">&#39;ffff_ffff&#39;</span></code></pre>
 </div>
 </div>
 </div>
@@ -831,7 +1014,7 @@ Belgeler için <a href="beautiful-soup/">tıklayın</a>.</p>
 <div id="footer">
 <div id="footer-text">
 Sürüm 0.1<br>
-Son güncelleme 2018-02-13 23:01:05 Türkiye Standart Saati
+Son güncelleme 2018-02-22 19:52:47 Turkey Standard Time
 </div>
 </div>
 </body>
