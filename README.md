@@ -1,5 +1,7 @@
 # YazBel Belgeleri
 
+**Önemli not:** İki ayrı belgelendirmeden kaçınmak için Python ile ilgili katkılarınızı lütfen [python-istihza belgelendirmesi](https://github.com/yazbel/python-istihza)ne yapınız.
+
 [https://belgeler.yazbel.com](https://belgeler.yazbel.com)
 
 YazBel projesi belgelerine hoşgeldiniz! Bu veri havuzu çeşitli programlama dilleri, çatılar(frameworks), kütüphaneler,
