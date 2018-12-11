@@ -31,7 +31,6 @@ Bu belgeler şu anda Python 3.6 sürümünü baz alarak yazılmaktadır. Belgele
 [NOTE]
 ====
 istihza.com Python 3 belgelerine link:../python-istihza/[şu adres]ten ulaşabilirsiniz.
-Ayrıca bu belgeleri PDF olarak link:../python-istihza.pdf[şu adres]ten indirebilirsiniz.
 ====
 
 === Nasıl yardım alabilirim?

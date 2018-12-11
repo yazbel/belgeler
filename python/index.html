@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.6.1">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="YazBel Topluluğu">
 <title>Python Belgeleri</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -90,12 +90,13 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol{margin-left:1.5em}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -131,11 +132,7 @@ strong strong{font-weight:400}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menuref{color:#000}
-.menuseq b:not(.caret),.menuref{font-weight:inherit}
-.menuseq{word-spacing:-.02em}
-.menuseq b.caret{font-size:1.25em;line-height:.8}
-.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -202,7 +199,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:initial}
+.admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -258,13 +255,13 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -285,12 +282,10 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
-ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
-ul.unstyled,ol.unstyled{margin-left:0}
-ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -307,8 +302,7 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
-.colist>table tr>td:first-of-type img{max-width:initial}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -371,7 +365,6 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
-a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -430,7 +423,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .listingblock .pygments .hll { background-color: #ffffcc }
 .listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
 .listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
-/*.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
 .listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
 .listingblock .pygments .tok-o { color: #666666 } /* Operator */
 .listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
@@ -585,8 +578,7 @@ Lütfen aşağıda anlatıldığı şekilde belgelere katkıda bulununuz.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>istihza.com Python 3 belgelerine <a href="../python-istihza/">şu adres</a>ten ulaşabilirsiniz.
-Ayrıca bu belgeleri PDF olarak <a href="../python-istihza.pdf">şu adres</a>ten indirebilirsiniz.</p>
+<p>istihza.com Python 3 belgelerine <a href="../python-istihza/">şu adres</a>ten ulaşabilirsiniz.</p>
 </div>
 </td>
 </tr>
@@ -677,7 +669,7 @@ Python ile ilk uygulamanızı geliştirdiğinizde ve sonucunu ekranda gördüğ�
 <p>Komut İstemi&#8217;nde şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash"><span></span>&gt; py
+<pre class="pygments highlight"><code data-lang="bash">&gt; py
 Python <span class="tok-m">3</span>.6.4 <span class="tok-o">(</span>v3.6.4:d48eceb, Dec <span class="tok-m">19</span> <span class="tok-m">2017</span>, <span class="tok-m">06</span>:54:40<span class="tok-o">)</span> <span class="tok-o">[</span>MSC v.1900 <span class="tok-m">32</span> bit <span class="tok-o">(</span>Intel<span class="tok-o">)]</span> on win32
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
@@ -717,7 +709,7 @@ Python 2 için ise <code>py -2</code> yazmanız gerekir.
 <p>Terminal&#8217;de şu komutu vererek kurulumun başarılı bir şekilde tamamlanıp tamamlanmadığını kontrol edin:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash"><span></span>$ python3
+<pre class="pygments highlight"><code data-lang="bash">$ python3
 Python <span class="tok-m">3</span>.6.4 <span class="tok-o">(</span>v3.6.4:d48eceb, Dec <span class="tok-m">19</span> <span class="tok-m">2017</span>, <span class="tok-m">06</span>:54:40<span class="tok-o">)</span> <span class="tok-o">[</span>GCC <span class="tok-m">4</span>.2.1 <span class="tok-o">(</span>Apple Inc. build <span class="tok-m">5666</span><span class="tok-o">)</span> <span class="tok-o">(</span>dot <span class="tok-m">3</span><span class="tok-o">)]</span> on darwin
 Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;copyright&quot;</span>, <span class="tok-s2">&quot;credits&quot;</span> or <span class="tok-s2">&quot;license&quot;</span> <span class="tok-k">for</span> more information.
 &gt;&gt;&gt;</code></pre>
@@ -764,7 +756,7 @@ Type <span class="tok-s2">&quot;help&quot;</span>, <span class="tok-s2">&quot;co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-kn">import</span> <span class="tok-nn">datetime</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-kn">import</span> <span class="tok-nn">datetime</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">tarih</span> <span class="tok-o">=</span> <span class="tok-n">datetime</span><span class="tok-o">.</span><span class="tok-n">date</span><span class="tok-p">(</span><span class="tok-mi">2018</span><span class="tok-p">,</span><span class="tok-mi">2</span><span class="tok-p">,</span><span class="tok-mi">12</span><span class="tok-p">)</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {tarih:%A, %B </span><span class="tok-si">%d</span><span class="tok-s2">, %Y} tarihinde yazıldı&quot;</span>
@@ -795,7 +787,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">msj</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-s2">&quot;disk hatası&quot;</span><span class="tok-p">,</span> <span class="tok-mi">32</span><span class="tok-p">)</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">msj</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-s2">&quot;disk hatası&quot;</span><span class="tok-p">,</span> <span class="tok-mi">32</span><span class="tok-p">)</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-s2">&quot;hata: </span><span class="tok-si">%s</span><span class="tok-s2">&quot;</span> <span class="tok-o">%</span> <span class="tok-n">msj</span>
 <span class="tok-n">Traceback</span> <span class="tok-p">(</span><span class="tok-n">most</span> <span class="tok-n">recent</span> <span class="tok-n">call</span> <span class="tok-n">last</span><span class="tok-p">):</span>
   <span class="tok-n">File</span> <span class="tok-s2">&quot;&lt;stdin&gt;&quot;</span><span class="tok-p">,</span> <span class="tok-n">line</span> <span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-ow">in</span> <span class="tok-o">&lt;</span><span class="tok-n">module</span><span class="tok-o">&gt;</span>
@@ -807,7 +799,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;hata: {msj}&quot;</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;hata: {msj}&quot;</span>
 <span class="tok-s2">&quot;hata: (&#39;disk hatası&#39;, 32)&quot;</span></code></pre>
 </div>
 </div>
@@ -816,7 +808,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ad</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;YazBel&quot;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">y</span><span class="tok-err">ı</span><span class="tok-n">l</span> <span class="tok-o">=</span> <span class="tok-mi">2018</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">ay</span> <span class="tok-o">=</span> <span class="tok-s2">&quot;Şubat&quot;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">gun</span> <span class="tok-o">=</span> <span class="tok-mi">12</span>
@@ -829,7 +821,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;Bu sitenin adı {ad}, bu yazı {yıl} yılının, {ay} ayının {gün}&#39;sinde yazıldı&quot;</span><span class="tok-o">.</span>
 <span class="tok-s2">&quot;Bu sitenin adı YazBel, bu yazı 2018 yılının, Şubat ayının 12&#39;sinde yazıldı&quot;</span></code></pre>
 </div>
 </div>
@@ -841,7 +833,7 @@ Bu örnekteki <code>%A %B %d %Y</code> biçimlendiricileri <code>datetime</code>
 <h3 id="_örnekler">Örnekler</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">geni</span><span class="tok-err">ş</span><span class="tok-n">lik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">geni</span><span class="tok-err">ş</span><span class="tok-n">lik</span> <span class="tok-o">=</span> <span class="tok-mi">10</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">hassasiyet</span> <span class="tok-o">=</span> <span class="tok-mi">4</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">de</span><span class="tok-err">ğ</span><span class="tok-n">er</span> <span class="tok-o">=</span> <span class="tok-n">decimal</span><span class="tok-o">.</span><span class="tok-n">Decimal</span><span class="tok-p">(</span><span class="tok-s2">&quot;12.34567&quot;</span><span class="tok-p">)</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;result: {değer:{genişlik}.{hassasiyet}}&quot;</span> <span class="tok-c1"># Parantezler içerisine başka parantezler de yuvanalabilir</span>
@@ -875,7 +867,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-kn">from</span> <span class="tok-nn">typing</span> <span class="tok-kn">import</span> <span class="tok-n">List</span><span class="tok-p">,</span> <span class="tok-n">Dict</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-kn">from</span> <span class="tok-nn">typing</span> <span class="tok-kn">import</span> <span class="tok-n">List</span><span class="tok-p">,</span> <span class="tok-n">Dict</span>
 
 <span class="tok-c1">#PEP-526</span>
 <span class="tok-n">m</span><span class="tok-err">ü</span><span class="tok-n">rettebat</span><span class="tok-p">:</span> <span class="tok-n">List</span><span class="tok-p">[</span><span class="tok-nb">str</span><span class="tok-p">]</span> <span class="tok-o">=</span> <span class="tok-p">[]</span>
@@ -896,7 +888,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">kaptan</span> <span class="tok-c1"># Değişken değeri atanmamışsa ona erişmeye çalışınca Python &quot;NameError&quot; hatası verir</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">kaptan</span> <span class="tok-c1"># Değişken değeri atanmamışsa ona erişmeye çalışınca Python &quot;NameError&quot; hatası verir</span>
 <span class="tok-n">Traceback</span> <span class="tok-p">(</span><span class="tok-n">most</span> <span class="tok-n">recent</span> <span class="tok-n">call</span> <span class="tok-n">last</span><span class="tok-p">):</span>
   <span class="tok-n">File</span> <span class="tok-s2">&quot;&lt;stdin&gt;&quot;</span><span class="tok-p">,</span> <span class="tok-n">line</span> <span class="tok-mi">1</span><span class="tok-p">,</span> <span class="tok-ow">in</span> <span class="tok-o">&lt;</span><span class="tok-n">module</span><span class="tok-o">&gt;</span>
 <span class="tok-ne">NameError</span><span class="tok-p">:</span> <span class="tok-n">name</span> <span class="tok-s1">&#39;kaptan&#39;</span> <span class="tok-ow">is</span> <span class="tok-ow">not</span> <span class="tok-n">defined</span>
@@ -930,7 +922,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 <h3 id="_örnekler_2">Örnekler</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-c1"># Uygun Olmayan Kullanımlar</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-c1"># Uygun Olmayan Kullanımlar</span>
 <span class="tok-k">def</span> <span class="tok-nf">f</span><span class="tok-p">():</span>
     <span class="tok-k">global</span> <span class="tok-n">x</span><span class="tok-p">:</span> <span class="tok-nb">int</span>  <span class="tok-c1"># SyntaxError</span>
 
@@ -969,7 +961,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">1000000000000000</span> <span class="tok-c1"># Altçizgi yok</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">1000000000000000</span> <span class="tok-c1"># Altçizgi yok</span>
 <span class="tok-mi">1000000000000000</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-mi">1</span><span class="tok-n">_000_000_000_000_000</span> <span class="tok-c1"># Altçizgi var ama sayı yine aynı sayı</span>
 <span class="tok-mi">1000000000000000</span>
@@ -991,7 +983,7 @@ Değişkenlerin/parametrelerinin veri tipi <code>:</code> ile belirtilir, fonksi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="python"><span></span><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{1000000000:_}&quot;</span>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{1000000000:_}&quot;</span>
 <span class="tok-s1">&#39;1_000_000_000&#39;</span>
 <span class="tok-o">&gt;&gt;&gt;</span> <span class="tok-n">f</span><span class="tok-s2">&quot;{0xFFFFFFFF:_}&quot;</span>
 <span class="tok-s1">&#39;4_294_967_295&#39;</span>
@@ -1014,7 +1006,7 @@ Belgeler için <a href="beautiful-soup/">tıklayın</a>.</p>
 <div id="footer">
 <div id="footer-text">
 Sürüm 0.1<br>
-Son güncelleme 2018-02-22 19:52:47 Turkey Standard Time
+Son güncelleme 2018-12-11 09:31:24 STD
 </div>
 </div>
 </body>
