@@ -30,7 +30,7 @@ Bu belgelerin kaynak kodu https://github.com/yazbel/belgeler[GitHub'ta tutulmakt
 Bu belgeler şu anda Python 3.6 sürümünü baz alarak yazılmaktadır. Belgeler henüz olgunlaşmadığı için Python bilmiyorsanız önce İstihza sayfasından başlamanızı öneririz!
 [NOTE]
 ====
-istihza.com Python 3 belgelerine link:../python-istihza/[şu adres]ten ulaşabilirsiniz.
+istihza.com Python 3 belgelerine link:https://python-istihza.yazbel.com/[şu adres]ten ulaşabilirsiniz.
 ====
 
 === Nasıl yardım alabilirim?
@@ -148,7 +148,7 @@ Gördüğünüz gibi diziler `f"dizi"` şeklinde başında "f" olacak şekilde y
 metodu kaldırılmış, bu durumda değişkenlerimizi direkt olarak parantezlerin içine yazıyoruz, nasıl gösterilceklerini de(biçimlendirme ayarı) her zamanki gibi iki noktanın ":" önüne yazıyoruz.
 
 [NOTE]
-Bu örnekteki `%A %B %d %Y` biçimlendiricileri `datetime` link:../python-istihza/standart_moduller/datetime.html#strftime[modülü] için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
+Bu örnekteki `%A %B %d %Y` biçimlendiricileri `datetime` link:https://python-istihza.yazbel.com/standart_moduller/datetime.html#strftime[modülü] için önceden beri kullanılan biçimlendirme ayarlarıdır, f-string özelliği ile gelmemiştir.
 
 === Neden f-string?
 
@@ -206,7 +206,7 @@ Bunların ötesinde f-string içerisindeki python ifadeleri diğerlerinin aksine
 >>> f"{sayı:#0o} ve {sayı:o}" # 8'li sayma sistemi
 '0o2000 ve 2000'
 ----
-Daha fazlası için link:../python-istihza/karakter_dizilerini_bicimlendirmek.html[İstihza] sayfasına bakınız
+Daha fazlası için link:https://python-istihza.yazbel.com/karakter_dizilerini_bicimlendirmek.html[İstihza] sayfasına bakınız
 
 == Tip Belirtimi Sözdizimi
 
